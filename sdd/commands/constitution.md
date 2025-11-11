@@ -10,7 +10,11 @@ Create or update project constitution with guiding principles and quality standa
 ## What to do:
 
 1. **Parse user input** for principles, guidelines, and quality standards
-2. **Read existing constitution** if available at `.specify/memory/constitution.md`
+2. **Check for existing constitution** in common locations:
+   - `.specify/memory/constitution.md` (if exists)
+   - `CONSTITUTION.md` in project root
+   - `docs/constitution.md` (if docs directory exists)
+   - Ask user to specify location if multiple found
 3. **Create comprehensive constitution** with these sections:
    - **Project Principles** - Core development values
    - **Quality Standards** - Code quality, testing, documentation
@@ -21,7 +25,10 @@ Create or update project constitution with guiding principles and quality standa
    - **Development Workflow** - Git process, review requirements
    - **Deployment Guidelines** - Environments, release process
 
-4. **Ensure directory structure**: Create `.specify/memory/` if it doesn't exist
+4. **Choose appropriate location** for the constitution:
+   - **Preferred**: `.specify/memory/constitution.md` (creates directory if needed)
+   - **Alternative**: `CONSTITUTION.md` in project root
+   - **Fallback**: Ask user for preferred location
 5. **Write constitution.md** with formatted markdown sections
 6. **Reference existing standards** if user mentions specific frameworks or methodologies
 

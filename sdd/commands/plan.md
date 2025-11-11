@@ -19,7 +19,10 @@ Generate detailed technical implementation plan with architecture decisions base
    - Identify deployment environment
    - Note any specific libraries or services
 
-3. **Read project constitution** from `.specify/memory/constitution.md` if available
+3. **Read project constitution** if available:
+   - Check `.specify/memory/constitution.md`
+   - Check `CONSTITUTION.md` in project root
+   - Check `docs/constitution.md`
 4. **Analyze specification requirements** and map to technical solutions
 
 5. **Generate comprehensive technical plan** with these sections:

@@ -12,7 +12,7 @@ Analyze consistency between current specification, technical plan, and project c
 1. **Find current files** by looking for:
    - `specs/XXX-feature-name/spec.md` (specification)
    - `specs/XXX-feature-name/plan.md` (technical plan)
-   - `.specify/memory/constitution.md` (project constitution)
+   - Project constitution (check `.specify/memory/constitution.md`, `CONSTITUTION.md`, `docs/constitution.md`)
    - Checklists in `specs/XXX-feature-name/checklists/` if available
 
 2. **Perform comprehensive consistency analysis** across these dimensions:

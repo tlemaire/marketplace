@@ -21,7 +21,10 @@ Generate comprehensive quality checklists for requirements, UX, performance, and
    - Or specification file in current working directory
 
 3. **Create checklist directory**: `specs/XXX-feature-name/checklists/`
-4. **Read project constitution** from `.specify/memory/constitution.md` for quality standards
+4. **Read project constitution** for quality standards:
+   - Check `.specify/memory/constitution.md`
+   - Check `CONSTITUTION.md` in project root
+   - Check `docs/constitution.md`
 
 5. **Generate specific checklists** based on type:
 

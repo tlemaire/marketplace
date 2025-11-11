@@ -14,7 +14,10 @@ Transform feature description into detailed functional specification with user s
 3. **Create feature directory**: `specs/XXX-feature-name/`
 4. **Initialize Git branch**: Create feature branch if in Git repository
 
-5. **Read project constitution** from `.specify/memory/constitution.md` if available
+5. **Read project constitution** if available:
+   - Check `.specify/memory/constitution.md`
+   - Check `CONSTITUTION.md` in project root
+   - Check `docs/constitution.md`
 6. **Create comprehensive specification** with these sections:
 
    ```markdown

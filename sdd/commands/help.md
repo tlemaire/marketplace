@@ -33,7 +33,7 @@ Display comprehensive help information for all SDD commands and workflow guidanc
    - `specs/XXX-feature-name/` directory
    - `spec.md`, `plan.md`, `tasks.md` files
    - `checklists/` directory with quality gates
-   - `.specify/memory/constitution.md`
+   - Project constitution (created by `/sdd.constitution` in various possible locations)
 
 5. **Show integration points with Claude Code**:
    - Git branch management
