@@ -1,43 +1,130 @@
 # SDD - Spec-Driven Development
 
-Transform ideas into structured specifications and executable code through a systematic workflow.
+Transform ideas into structured specifications and executable code through a systematic workflow optimized for Claude Code.
+
+## Overview
+
+SDD implements the Spec-Driven Development methodology with built-in KISS and YAGNI principles, environment management, and development automation.
 
 ## Quick Start
 
 ```bash
 # Get started with SDD
 /sdd.help
-```
 
-## Core Commands
-
-- `/sdd.help` - Display comprehensive help
-- `/sdd.specify` - Create structured specification from ideas
-- `/sdd.plan` - Generate technical implementation plan
-- `/sdd.tasks` - Create actionable task list
-- `/sdd.implement` - Execute implementation tasks
-- `/sdd.analyze` - Analyze consistency between artifacts
-
-## Workflow
-
-1. **Specify** - Transform ideas into structured specifications
-2. **Plan** - Generate detailed implementation plans
-3. **Task** - Break down into actionable tasks
-4. **Implement** - Execute tasks in logical order
-
-## Example
-
-```
-/sdd.specify "Create a photo album app with user authentication"
-/sdd.plan "React, Node.js, MongoDB"
+# Complete project setup
+/sdd.constitution "Follow KISS principles, use React, TypeScript"
+/sdd.specify "Add user authentication system"
+/sdd.plan "React, TypeScript, Node.js, PostgreSQL"
 /sdd.tasks
 /sdd.implement
 ```
 
+## Complete Command Set
+
+**Foundation Commands:**
+- `/sdd.help` - Display comprehensive help and workflow guidance
+- `/sdd.constitution` - Define project principles with KISS/YAGNI guidelines
+
+**Specification Phase:**
+- `/sdd.specify` - Create structured specification from natural language
+- `/sdd.clarify` - Resolve specification ambiguities interactively
+
+**Planning Phase:**
+- `/sdd.plan` - Generate technical implementation plan with environment setup
+- `/sdd.tasks` - Create 25 dependency-organized implementation tasks
+
+**Quality Assurance:**
+- `/sdd.checklist` - Generate quality checklists (requirements, UX, performance, accessibility)
+- `/sdd.analyze` - Analyze consistency between spec, plan, and constitution
+
+**Implementation:**
+- `/sdd.implement` - Execute implementation tasks in dependency order
+
+## SDD Workflow
+
+1. **Constitution** - Define project principles with KISS and YAGNI guidelines
+2. **Specify** - Transform ideas into structured specifications with user stories
+3. **Clarify** - (Optional) Resolve specification ambiguities interactively
+4. **Plan** - Generate detailed implementation plans with environment configuration
+5. **Tasks** - Break down into 25 dependency-organized tasks
+6. **Checklists** - Generate quality assurance checklists
+7. **Analyze** - (Optional) Analyze consistency between all artifacts
+8. **Implement** - Execute tasks in logical dependency order
+
+## Generated Files
+
+Each SDD workflow creates a complete project structure:
+
+```
+specs/
+├── XXX-feature-name/
+│   ├── spec.md              # Functional specification
+│   ├── plan.md              # Technical implementation plan
+│   ├── tasks.md             # 25 dependency-organized tasks
+│   ├── research.md          # Technical research
+│   ├── data-model.md        # Database schema
+│   └── checklists/          # Quality checklists
+CONSTITUTION.md              # Project principles and standards
+.env.example                # Environment variables template
+Makefile                    # Development automation (15+ commands)
+```
+
+## Example Project
+
+```bash
+# Set project principles
+/sdd.constitution "KISS principles, React, TypeScript, 90% test coverage"
+
+# Create specification
+/sdd.specify "Build a task management system with drag-and-drop"
+
+# Technical planning
+/sdd.plan "React, TypeScript, Node.js, Express, PostgreSQL"
+
+# Generate and execute tasks
+/sdd.tasks
+/sdd.implement
+```
+
+## Key Features
+
+- **🏛️ KISS & YAGNI Principles**: Built-in guidance for simple, maintainable code
+- **🔧 Environment Management**: Automatic .env.example and Makefile generation
+- **📋 25-Task Breakdown**: Comprehensive, dependency-organized implementation tasks
+- **✅ Quality Gates**: Built-in checklists and consistency analysis
+- **🔄 Git Integration**: Automatic branch creation and management
+- **📊 Traceability**: Clear links from requirements through implementation
+
+## Development Tools Generated
+
+**Makefile Commands:**
+- `make help` - Show all available commands
+- `make install` - Install dependencies
+- `make dev` - Start development server
+- `make test` - Run test suite
+- `make build` - Build for production
+- `make deploy` - Deploy application
+- `make lint` - Code quality checks
+- Plus 8+ additional commands for database, cleaning, and utilities
+
+**Environment Files:**
+- `.env.example` - Template with all required variables
+- Support for multiple environments (development, staging, production)
+- Security best practices built-in
+
 ## Documentation
 
 - [Complete Guide](SDD.md) - Full methodology documentation
-- [Examples](specs/) - Sample specifications and plans
+- [Developer Guide](CLAUDE.md) - Claude-specific guidance and development
+- [Constitution Examples](../CONSTITUTION.md) - Project principles and standards
+
+## Version
+
+**Version:** 1.0.0
+**Size:** 13 files, 88KB (optimized marketplace plugin)
+**Commands:** 9 comprehensive SDD workflow commands
+**Dependencies:** Git, Claude Code 2.0.37+
 
 ---
 **Installed from:** Thierry Lemaire Marketplace
