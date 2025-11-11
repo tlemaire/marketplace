@@ -1,0 +1,80 @@
+{
+  "name": "@claude-code/sdd-skill",
+  "version": "1.0.0",
+  "description": "Claude Code exclusive skill for Spec-Driven Development (SDD) - Transform ideas into structured specifications and executable code",
+  "main": "SDD.md",
+  "scripts": {
+    "install": "node install.js",
+    "postinstall": "scripts/bash/setup-global.sh",
+    "test": "node test.js",
+    "update": "scripts/bash/check-spec-kit-updates.sh",
+    "uninstall": "node uninstall.js"
+  },
+  "keywords": [
+    "claude-code",
+    "skill",
+    "spec-driven-development",
+    "sdd",
+    "development",
+    "specification",
+    "workflow"
+  ],
+  "author": {
+    "name": "Claude Code Assistant",
+    "email": "claude@anthropic.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tlemaire/claude-code-sdd-skill.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tlemaire/claude-code-sdd-skill/issues"
+  },
+  "homepage": "https://github.com/tlemaire/claude-code-sdd-skill#readme",
+  "files": [
+    "SDD.md",
+    "README.md",
+    "CLAUDE.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "FAQ.md",
+    "scripts/",
+    "templates/",
+    ".specify/",
+    ".claude/",
+    "install.js",
+    "uninstall.js",
+    "test.js"
+  ],
+  "claude": {
+    "skill": {
+      "name": "SDD - Spec-Driven Development",
+      "description": "Transform ideas into structured specifications and executable code",
+      "version": "1.0.0",
+      "commands": [
+        "help",
+        "constitution",
+        "specify",
+        "clarify",
+        "plan",
+        "tasks",
+        "checklist",
+        "analyze",
+        "implement"
+      ],
+      "category": "development",
+      "tags": ["workflow", "specification", "planning"],
+      "exclusive_to": "claude_code",
+      "minimum_claude_version": "2.0.37"
+    }
+  },
+  "engines": {
+    "claude": ">=2.0.37",
+    "node": ">=14.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+}
