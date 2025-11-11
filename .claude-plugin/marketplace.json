@@ -13,9 +13,7 @@
       "description": "Claude Code exclusive skill for implementing Spec-Driven Development using GitHub Spec Kit principles. Transform ideas into structured specifications and executable code through a structured workflow.",
       "version": "1.0.0",
       "source": "./sdd",
-      "license": "MIT",
-      "tags": ["sdd", "spec-driven-development", "workflow", "specification", "planning", "development"],
-      "category": "development"
+      "license": "MIT"
     }
   ],
   "categories": {
