@@ -109,6 +109,7 @@ git push origin v1.2.0
 - **Breaking Change Detection**: Identifies and highlights breaking changes
 
 ### 📋 **Automatic Changelog Updates**
+- **Global Creation**: Creates CHANGELOG.md in project root if it doesn't exist
 - **Smart Detection**: Automatically finds and updates existing CHANGELOG.md
 - **Format Standards**: Follows Keep a Changelog specification
 - **Change Categorization**: Groups changes by type (Added, Fixed, Changed)
@@ -193,10 +194,10 @@ Create `smartcommit.json` in your project root for customization:
 ```
 
 ### Changelog Integration
-SmartCommit automatically updates changelogs when:
-1. **CHANGELOG.md exists** in project root
-2. **Changes are significant** (features, improvements, or important fixes)
-3. **Changelog follows Keep a Changelog format**
+SmartCommit automatically creates and updates a global CHANGELOG.md when:
+1. **Changes are significant** (features, improvements, or important fixes)
+2. **CHANGELOG.md is created in project root** if it doesn't exist
+3. **Changelog follows Keep a Changelog format** with proper structure
 
 ## Integration Examples
 

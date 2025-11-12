@@ -1,11 +1,40 @@
-# SDD (Spec-Driven Development) Changelog
+# Changelog
 
-All notable changes to the SDD plugin will be documented in this file.
+All notable changes to the marketplace plugins will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.1.0] - 2025-11-12
+## [Unreleased]
+
+### Added
+- SmartCommit plugin for intelligent commit message generation with automatic changelog updates
+- SDD plugin for Spec-Driven Development workflow implementation
+- Global CHANGELOG.md for unified marketplace changelog management
+
+### Changed
+- Marketplace configuration simplified with single "category" field instead of "categories"
+- SmartCommit streamlined to single command approach with automatic commit execution
+- Updated marketplace name from "thierry-lemaire-marketplace" to "marketplace"
+- Consolidated SDD plugin changelog into global marketplace changelog
+- Enhanced SmartCommit to create and manage global CHANGELOG.md automatically
+
+### Fixed
+- Plugin loading issues by fixing marketplace symlink configuration
+- SmartCommit slash command execution to properly commit after message generation
+- Removed duplicate changelog files to maintain single source of truth
+
+## [1.0.0] - 2024-11-12
+
+### Added
+- Initial marketplace setup with SDD and SmartCommit plugins
+- Plugin configuration and documentation structure
+- Slash command implementations for both plugins
+- Comprehensive samples and examples for SDD workflow
+
+## SDD Plugin History
+
+### [1.1.0] - 2025-11-12
 
 ### Added
 - **GitHub Spec Kit Compliance Documentation**
@@ -57,7 +86,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - File Structure: Improved organization over Spec Kit standard
   - Command Naming: `/sdd.*` (enhanced usability vs `/speckit.*`)
 
-## [1.0.0] - 2024-XX-XX
+### [1.0.0] - 2024-XX-XX
 
 ### Added
 - **SDD (Spec-Driven Development) Plugin**
@@ -82,20 +111,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Claude-specific developer guide (CLAUDE.md)
   - Comprehensive README.md with usage examples
   - Sample outputs for different complexity levels
-
----
-
-## SDD Version Strategy
-
-- **Major versions**: Breaking changes or significant workflow modifications
-- **Minor versions**: New commands, enhanced features, documentation improvements
-- **Patch versions**: Bug fixes, sample updates, documentation refinements
-
-## Documentation Standards
-
-- All significant changes must be documented in this changelog
-- New features require README.md updates
-- Compliance changes must reference relevant analysis documents
-- Sample projects must be updated when workflow changes
-
-**Note**: This changelog is maintained as part of the SDD methodology's commitment to transparency and quality by design.

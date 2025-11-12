@@ -46,9 +46,10 @@ docs(readme): Update installation instructions for Python 3.11
 ```
 
 ### 2. Automatic Changelog Updates
-When CHANGELOG.md exists, SmartCommit automatically adds entries:
+SmartCommit automatically creates CHANGELOG.md in project root if it doesn't exist and adds entries:
 
 ```markdown
+# Changelog
 ## [Unreleased]
 
 ### Added

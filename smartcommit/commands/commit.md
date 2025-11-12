@@ -31,8 +31,9 @@ Generate intelligent commit messages based on staged changes, automatically upda
    - Add detailed body when changes are complex
    - Include issue references when detected
 
-4. **Update changelog if necessary**:
-   - Check if changelog exists in project
+4. **Update global changelog if necessary**:
+   - Check if CHANGELOG.md exists in project root
+   - Create CHANGELOG.md in root if it doesn't exist with proper structure
    - Parse existing changelog structure
    - Add new entry under "Unreleased" section
    - Format changes according to Keep a Changelog standard
@@ -128,11 +129,11 @@ fix(ui): Resolve responsive layout issues on mobile devices
 
 ## Changelog Integration
 
-The Smart Commit command automatically updates changelogs when:
+The Smart Commit command automatically creates and updates a global CHANGELOG.md when:
 
-1. **CHANGELOG.md exists** in project root
-2. **Changes are significant** (features, improvements, or important fixes)
-3. **Changelog follows Keep a Changelog format**
+1. **Changes are significant** (features, improvements, or important fixes)
+2. **CHANGELOG.md is created in project root** if it doesn't exist
+3. **Changelog follows Keep a Changelog format** with proper structure
 
 ### Changelog Format
 ```markdown
@@ -168,10 +169,11 @@ Co-Authored-By: Claude <noreply@anthropic.com>"
 
 1. **Stage all changes**: Ensure all modifications are staged
 2. **Analyze changes**: Categorize and generate commit message
-3. **Update changelog** (if applicable): Add entries to CHANGELOG.md
-4. **Re-stage changelog** (if updated): `git add CHANGELOG.md`
-5. **Execute commit**: Run git commit with generated message + attribution
-6. **Verify success**: Check git status to confirm commit
+3. **Update changelog** (if applicable): Add entries to CHANGELOG.md in root
+4. **Create changelog** (if missing): Create CHANGELOG.md in root with proper structure
+5. **Re-stage changelog** (if updated): `git add CHANGELOG.md`
+6. **Execute commit**: Run git commit with generated message + attribution
+7. **Verify success**: Check git status to confirm commit
 
 ### Error Handling
 
