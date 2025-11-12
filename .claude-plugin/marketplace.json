@@ -1,5 +1,5 @@
 {
-  "name": "thierry-lemaire-marketplace",
+  "name": "marketplace",
   "description": "Personal marketplace for Claude Code plugins and skills by Thierry Lemaire",
   "version": "1.0.0",
   "owner": {
@@ -14,7 +14,7 @@
       "version": "1.0.0",
       "source": "./sdd",
       "license": "MIT",
-      "categories": ["workflow", "development"]
+      "category": "development"
     },
     {
       "name": "smartcommit",
@@ -22,7 +22,7 @@
       "version": "1.0.0",
       "source": "./smartcommit",
       "license": "MIT",
-      "categories": ["productivity", "workflow"]
+      "category": "productivity"
     }
   ],
   "categories": {

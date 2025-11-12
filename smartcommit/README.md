@@ -46,14 +46,14 @@ claude plugin marketplace add smartcommit
 # Stage your changes
 git add .
 
-# Generate intelligent commit message
+# Generate intelligent commit message (with automatic changelog update)
 /smartcommit.commit
 
-# Generate commit with changelog update
-/smartcommit.commit --update-changelog
+# Preview commit message without committing
+/smartcommit.commit --dry-run
 
-# Bump version automatically
-/smartcommit.version --auto
+# Use custom message template
+/smartcommit.commit "Add user authentication system"
 ```
 
 ### Typical Workflow
@@ -64,45 +64,32 @@ git add .
 # 2. Stage changes
 git add .
 
-# 3. Generate smart commit
+# 3. Generate smart commit (handles changelog automatically)
 /smartcommit.commit
 # Output: feat(auth): Add OAuth2 integration with GitHub
 
-# 4. Update changelog automatically
-/smartcommit.changelog
+# 4. Done! Changelog updated automatically if it exists
 
-# 5. Bump version if needed
-/smartcommit.version --minor
-
-# 6. Release
+# 5. For releases, manually bump version and tag
 git tag v1.2.0
 git push origin v1.2.0
 ```
 
-## Commands
+## Command
 
-### Core Commands
-- **`/smartcommit.commit`** - Generate intelligent commit messages
-- **`/smartcommit.changelog`** - Manage changelog entries
-- **`/smartcommit.version`** - Handle semantic versioning
-- **`/smartcommit.help`** - Show comprehensive help and guidance
+### Single Smart Command
+- **`/smartcommit.commit`** - Generate intelligent commit messages with automatic changelog updates
 
-### Advanced Usage
+### Usage Options
 ```bash
-# Analyze changes without committing
+# Standard smart commit
+/smartcommit.commit
+
+# Preview without committing
 /smartcommit.commit --dry-run
 
-# Generate changelog from date range
-/smartcommit.changelog --since=2024-01-01 --until=2024-01-31
-
-# Check version consistency across files
-/smartcommit.version --check
-
-# Bump version based on commit analysis
-/smartcommit.version --auto
-
-# Interactive version management
-/smartcommit.version --interactive
+# Custom message
+/smartcommit.commit "Custom commit message"
 ```
 
 ## Features
@@ -121,30 +108,18 @@ git push origin v1.2.0
 - **Issue Integration**: Links to relevant issue numbers automatically
 - **Breaking Change Detection**: Identifies and highlights breaking changes
 
-### 📋 **Automatic Changelog Management**
+### 📋 **Automatic Changelog Updates**
+- **Smart Detection**: Automatically finds and updates existing CHANGELOG.md
 - **Format Standards**: Follows Keep a Changelog specification
-- **Version Organization**: Maintains chronological version history
 - **Change Categorization**: Groups changes by type (Added, Fixed, Changed)
-- **Date Tracking**: Automatically includes release dates
-- **Template Support**: Customizable changelog templates
+- **Conditional Updates**: Updates changelog only for significant changes
+- **Integration Ready**: Works with existing changelog formats
 
-### 📦 **Multi-Format Versioning**
-- **Configuration Files**: Supports package.json, pyproject.toml, Cargo.toml, etc.
-- **Semantic Versioning**: Automatic version bump suggestions
-- **Cross-File Consistency**: Ensures version consistency across all files
-- **Pre-release Support**: Handles alpha, beta, release candidate versions
-- **Custom Patterns**: Support for custom version file formats
-
-### 🔧 **Project Type Detection**
-- **Node.js**: package.json, npm, yarn workspaces
-- **Python**: pyproject.toml, setup.py, Poetry
-- **Rust**: Cargo.toml, Cargo.lock
-- **PHP**: composer.json
-- **Dart/Flutter**: pubspec.yaml
-- **Java**: pom.xml, build.gradle
-- **Ruby**: Gemfile, *.gemspec
-- **Go**: go.mod
-- **C#**: *.csproj, package.config
+### ⚡ **Simplified Workflow**
+- **Single Command**: One command handles commit + changelog
+- **Preview Mode**: Dry-run option to review before committing
+- **Custom Messages**: Support for custom commit message templates
+- **Zero Configuration**: Works out of the box with no setup required
 
 ## Generated Files
 
@@ -190,8 +165,14 @@ version = "1.2.3"
 
 ## Configuration
 
-### Quick Setup
-Create `smartcommit.json` in your project root:
+### Zero Configuration Required
+SmartCommit works out of the box with no setup needed! Just run:
+```bash
+/smartcommit.commit
+```
+
+### Optional Configuration
+Create `smartcommit.json` in your project root for customization:
 
 ```json
 {
@@ -206,51 +187,16 @@ Create `smartcommit.json` in your project root:
   },
   "changelog": {
     "file": "CHANGELOG.md",
-    "format": "keep-a-changelog",
-    "autoVersion": true
-  },
-  "versioning": {
-    "autoBump": true,
-    "files": ["package.json", "pyproject.toml"],
-    "scheme": "semantic"
+    "updateAutomatically": true
   }
 }
 ```
 
-### Advanced Configuration
-```json
-{
-  "analysis": {
-    "maxFileSize": 1048576,
-    "ignorePatterns": ["*.log", "*.tmp", "dist/"],
-    "fileTypeDetection": true,
-    "scopeInference": true
-  },
-  "commit": {
-    "maxLength": 72,
-    "requireScope": false,
-    "autoDetectBreaking": true,
-    "linkIssues": true
-  },
-  "changelog": {
-    "template": "templates/changelog.md",
-    "groupBy": "type",
-    "sortBy": "date",
-    "includeAuthors": false
-  },
-  "versioning": {
-    "preReleaseTags": ["alpha", "beta", "rc"],
-    "buildMetadata": true,
-    "customFiles": [
-      {
-        "path": "src/version.py",
-        "pattern": "VERSION = \"(.+)\"",
-        "replacement": "VERSION = \"{version}\""
-      }
-    ]
-  }
-}
-```
+### Changelog Integration
+SmartCommit automatically updates changelogs when:
+1. **CHANGELOG.md exists** in project root
+2. **Changes are significant** (features, improvements, or important fixes)
+3. **Changelog follows Keep a Changelog format**
 
 ## Integration Examples
 
@@ -404,11 +350,11 @@ SmartCommit automatically detects and manages versions in:
 
 ## Documentation
 
-- [Complete Guide](docs/README.md) - Full documentation
-- [Configuration Guide](docs/configuration.md) - Detailed configuration options
-- [Integration Examples](docs/integrations.md) - Git hooks, CI/CD, IDE extensions
-- [API Reference](docs/api.md) - Command reference and options
-- [Troubleshooting](docs/troubleshooting.md) - Common issues and solutions
+- [Command Reference](#commands) - Core commands and usage examples
+- [Configuration Guide](#configuration) - Setup and customization options
+- [Integration Examples](#integration-examples) - Git hooks, CI/CD, and workflows
+- [Samples](#examples-1) - Complete examples in samples/ directory
+- [Troubleshooting](#commands) - Common issues and solutions in help command
 
 ## Examples
 
