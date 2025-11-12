@@ -235,6 +235,7 @@ Makefile                    # Development automation (15+ commands)
 - [Complete Guide](SDD.md) - Full methodology documentation
 - [Developer Guide](CLAUDE.md) - Claude-specific guidance and development
 - [Spec Kit Compliance](../SPEC_KIT_COMPLIANCE.md) - Detailed compliance analysis and comparison
+- [Changelog](CHANGELOG.md) - Version history and release notes
 - [Sample Outputs](samples/) - Example SDD-generated files and workflows
 
 ## Samples

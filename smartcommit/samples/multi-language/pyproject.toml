@@ -1,0 +1,45 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "multi-language-project"
+version = "1.0.0"
+description = "Multi-language project demonstrating SmartCommit across different configuration formats"
+authors = ["SmartCommit Team <team@smartcommit.dev>"]
+readme = "README.md"
+license = "MIT"
+keywords = ["multi-language", "smartcommit", "typescript", "python", "rust"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.100.0"
+uvicorn = "^0.20.0"
+pydantic = "^2.0.0"
+requests = "^2.31.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+black = "^23.0.0"
+isort = "^5.12.0"
+mypy = "^1.5.0"
+pre-commit = "^3.4.0"
+
+[tool.poetry.scripts]
+multi-lang = "multi_language_project.main:app"
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true

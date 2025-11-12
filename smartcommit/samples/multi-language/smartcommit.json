@@ -1,0 +1,43 @@
+{
+  "commitTypes": {
+    "feat": "Features",
+    "improve": "Improvements",
+    "fix": "Bug Fixes",
+    "docs": "Documentation",
+    "test": "Testing",
+    "config": "Configuration",
+    "chore": "Maintenance"
+  },
+  "changelog": {
+    "file": "CHANGELOG.md",
+    "format": "keep-a-changelog",
+    "autoVersion": true
+  },
+  "versioning": {
+    "autoBump": true,
+    "files": ["package.json", "pyproject.toml", "Cargo.toml"],
+    "scheme": "semantic"
+  },
+  "multiLanguage": {
+    "enabled": true,
+    "syncStrategy": "all",
+    "primaryFormat": "package.json"
+  },
+  "customFiles": [
+    {
+      "path": "src/version.ts",
+      "pattern": "export const VERSION = \"(.+)\";",
+      "replacement": "export const VERSION = \"{version}\";"
+    },
+    {
+      "path": "python/multi_language_project/__init__.py",
+      "pattern": "__version__ = \"(.+)\"",
+      "replacement": "__version__ = \"{version}\""
+    },
+    {
+      "path": "rust/src/lib.rs",
+      "pattern": "pub const VERSION: &str = \"(.+)\";",
+      "replacement": "pub const VERSION: &str = \"{version}\";"
+    }
+  ]
+}

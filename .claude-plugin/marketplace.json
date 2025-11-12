@@ -6,20 +6,37 @@
     "name": "Thierry Lemaire",
     "email": "thierry.lemaire@gmail.com"
   },
-  "homepage": "https://github.com/tlemaire/thierry-lemaire-marketplace",
+  "homepage": "https://github.com/tlemaire/marketplace",
   "plugins": [
     {
       "name": "sdd",
       "description": "Claude Code exclusive skill for implementing Spec-Driven Development using GitHub Spec Kit principles. Transform ideas into structured specifications and executable code through a structured workflow.",
       "version": "1.0.0",
       "source": "./sdd",
-      "license": "MIT"
+      "license": "MIT",
+      "categories": ["workflow", "development"]
+    },
+    {
+      "name": "smartcommit",
+      "description": "Intelligent commit message generator with automatic changelog management and semantic versioning support for multiple configuration formats (.toml, .json, .yaml). Analyzes staged changes to generate conventional commit messages and maintain version consistency across projects.",
+      "version": "1.0.0",
+      "source": "./smartcommit",
+      "license": "MIT",
+      "categories": ["productivity", "workflow"]
     }
   ],
   "categories": {
     "development": {
       "name": "Development Tools",
       "description": "Plugins for software development workflows and tools"
+    },
+    "productivity": {
+      "name": "Productivity",
+      "description": "Plugins that enhance development productivity and automation"
+    },
+    "workflow": {
+      "name": "Workflow Management",
+      "description": "Plugins for managing development workflows and processes"
     }
   }
 }

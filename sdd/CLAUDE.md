@@ -177,7 +177,7 @@ shortcut: sdd.command_name
 
 **Installation:**
 ```bash
-claude plugin marketplace add https://github.com/tlemaire/thierry-lemaire-marketplace
+claude plugin marketplace add https://github.com/tlemaire/marketplace
 claude plugin install sdd@thierry-lemaire-marketplace
 ```
 

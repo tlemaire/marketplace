@@ -1,6 +1,6 @@
 {
-  "name": "sdd",
-  "description": "Spec-Driven Development skill for Claude Code. Transform ideas into structured specifications and executable code through a systematic workflow.",
+  "name": "smartcommit",
+  "description": "Intelligent commit message generator with automatic changelog management and semantic versioning support for multiple configuration formats (.toml, .json, .yaml)",
   "version": "1.0.0",
   "license": "MIT",
   "homepage": "https://github.com/tlemaire/marketplace",
