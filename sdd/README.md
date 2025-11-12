@@ -50,7 +50,7 @@ Transform ideas into structured specifications and executable code through a sys
 - **Additional Commands**: Clarify, Checklist, Analyze, and Help for enhanced workflow
 - **Progressive Samples**: Complexity-organized learning examples
 
-> **Note**: These differences enhance the Spec Kit experience while maintaining full compliance with core principles. For detailed compliance analysis, see [SPEC_KIT_COMPLIANCE.md](../SPEC_KIT_COMPLIANCE.md).
+> **Note**: These differences enhance the Spec Kit experience while maintaining full compliance with core principles. For detailed compliance analysis, see the [SDD Plugin History](../CHANGELOG.md#sdd-plugin) section in the global changelog.
 
 ## Enhanced Memory Approach
 

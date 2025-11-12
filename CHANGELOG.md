@@ -14,6 +14,9 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 - **Documentation Structure**: Transformed marketplace README with detailed plugin descriptions, usage examples, and professional formatting
 - **Plugin Presentation**: Enhanced plugin visibility with key features, quick start guides, and real-world workflow examples
 
+### ✅ Fixed
+- **Broken Documentation Link**: Fixed SDD README.md reference to non-existent SPEC_KIT_COMPLIANCE.md file, updated to point to global changelog
+
 ## [1.2.0] - 2025-11-12
 
 ### 🆕 Added
