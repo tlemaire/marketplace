@@ -1,11 +1,11 @@
 ---
-description: Generate intelligent commit messages and update changelog if needed
+description: Generate intelligent commit messages, update changelog if needed, and execute the commit automatically
 shortcut: smartcommit.commit
 ---
 
 # Smart Commit Command
 
-Generate intelligent commit messages based on staged changes and automatically update changelog when necessary.
+Generate intelligent commit messages based on staged changes, automatically update changelog when necessary, and execute the commit immediately.
 
 ## What to do:
 
@@ -38,11 +38,11 @@ Generate intelligent commit messages based on staged changes and automatically u
    - Format changes according to Keep a Changelog standard
    - Maintain chronological order
 
-5. **Execute commit**:
-   - Present generated commit message to user
-   - Allow user to review and modify if needed
-   - Execute git commit with the message
+5. **Execute commit automatically**:
+   - Execute git commit with the generated message immediately
+   - Include Claude Code attribution in commit footer
    - Provide feedback on completed action
+   - Handle any commit errors gracefully
 
 ## Commit Message Types
 
@@ -148,6 +148,36 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 - Bug fix description here
 ```
+
+## Implementation
+
+### Commit Execution Steps
+
+After analyzing changes and updating changelog (if necessary), immediately execute:
+
+```bash
+# Execute the commit with the generated message
+git commit -m "generated-commit-message
+
+🤖 Generated with [Claude Code](https://claude.com/claude-code)
+
+Co-Authored-By: Claude <noreply@anthropic.com>"
+```
+
+### Required Execution Order
+
+1. **Stage all changes**: Ensure all modifications are staged
+2. **Analyze changes**: Categorize and generate commit message
+3. **Update changelog** (if applicable): Add entries to CHANGELOG.md
+4. **Re-stage changelog** (if updated): `git add CHANGELOG.md`
+5. **Execute commit**: Run git commit with generated message + attribution
+6. **Verify success**: Check git status to confirm commit
+
+### Error Handling
+
+- **No staged changes**: Guide user to stage files first
+- **Commit failure**: Show git error and suggest resolution
+- **Changelog update failure**: Continue with commit but warn user
 
 ## Configuration
 

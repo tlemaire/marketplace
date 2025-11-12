@@ -10,7 +10,7 @@ Comprehensive help and guidance for intelligent commit message generation with a
 ## Available Command
 
 ### Core Command
-- **`/smartcommit.commit`** - Generate intelligent commit messages with automatic changelog updates
+- **`/smartcommit.commit`** - Generate intelligent commit messages, update changelog if needed, and execute the commit automatically
 
 ## Quick Start Examples
 

@@ -78,7 +78,7 @@ git push origin v1.2.0
 ## Command
 
 ### Single Smart Command
-- **`/smartcommit.commit`** - Generate intelligent commit messages with automatic changelog updates
+- **`/smartcommit.commit`** - Generate intelligent commit messages, update changelog if needed, and execute the commit automatically
 
 ### Usage Options
 ```bash
