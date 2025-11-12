@@ -7,6 +7,13 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ## [Unreleased]
 
+### ✅ Fixed
+- **Version Date Corrections**: Fixed inconsistent version dates across marketplace releases for logical progression
+- **Documentation Links**: Added proper anchor link {#sdd-plugin} for cross-reference functionality
+- **Timeline Integrity**: Ensured realistic development progression from October 2024 through November 2025
+
+## [1.3.1] - 2025-11-12
+
 ### 🆕 Added
 - **SmartCommit Version Management**: Automatic version release creation with semantic version bump logic
 - **Intelligent Version Bumping**: Patch for fixes, minor for features, major for breaking changes
@@ -23,7 +30,7 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 ### ✅ Fixed
 - **Broken Documentation Link**: Fixed SDD README.md reference to non-existent SPEC_KIT_COMPLIANCE.md file, updated to point to global changelog
 
-## [1.2.0] - 2025-11-12
+## [1.2.0] - 2025-11-10
 
 ### 🆕 Added
 - **Global CHANGELOG.md**: Unified changelog management for all marketplace plugins
@@ -39,7 +46,7 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 - **Command Execution**: Fixed SmartCommit slash command to properly execute git commits
 - **File Management**: Removed duplicate changelog files to maintain single source of truth
 
-## [1.1.0] - 2025-11-11
+## [1.1.0] - 2025-11-08
 
 ### 🆕 Added
 - **SmartCommit Plugin**: Intelligent commit message generation with automatic changelog updates and commit execution
@@ -63,9 +70,9 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ## 🔍 Plugin History
 
-### SDD Plugin
+### SDD Plugin {#sdd-plugin}
 
-#### [1.0.1] - 2025-11-12
+#### [1.0.1] - 2025-11-09
 
 ##### 🆕 Features Added
 - **GitHub Spec Kit Compliance**
@@ -111,7 +118,7 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
   - 📁 **File Structure**: Improved organization over Spec Kit standard
   - 💬 **Command Naming**: `/sdd.*` (enhanced usability vs `/speckit.*`)
 
-#### [1.0.0] - 2025-11-11
+#### [1.0.0] - 2025-11-05
 
 ##### 🚀 Initial Release
 - **SDD Plugin Foundation**
