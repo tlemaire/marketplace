@@ -7,20 +7,25 @@ shortcut: smartcommit.help
 
 Comprehensive help and guidance for intelligent commit message generation with automatic changelog updates.
 
-## Available Command
+## Available Commands
 
-### Core Command
+### Core Commands
 - **`/smartcommit.commit`** - Generate intelligent commit messages, update changelog if needed, and execute the commit automatically
+- **`/smartcommit.release`** - Create version releases from [Unreleased] changelog entries with automatic semantic versioning
+- **`/smartcommit.help`** - Show this help and guidance information
 
 ## Quick Start Examples
 
 ### Basic Workflow
 ```bash
-# Stage your changes
+# 1. Stage your changes
 git add .
 
-# Generate smart commit with automatic changelog update
+# 2. Generate smart commit with automatic changelog update
 /smartcommit.commit
+
+# 3. When ready to release, create version from [Unreleased] entries
+/smartcommit.release
 ```
 
 ### Advanced Workflow
@@ -30,6 +35,12 @@ git add .
 
 # Generate with custom message
 /smartcommit.commit "Add user authentication system"
+
+# Preview release without executing
+/smartcommit.release --dry-run
+
+# Force specific version
+/smartcommit.release --version=2.0.0
 ```
 
 ## Core Concepts
@@ -47,6 +58,42 @@ docs(readme): Update installation instructions for Python 3.11
 
 ### 2. Automatic Changelog Updates
 SmartCommit automatically creates CHANGELOG.md in project root if it doesn't exist and manages releases:
+
+### 3. Semantic Versioning
+SmartCommit Release automatically determines version bumps based on [Unreleased] entries:
+
+```bash
+# Breaking Changes → Major Version
+## [Unreleased]
+### 💥 Breaking Changes
+- Remove deprecated API endpoints
+
+# Output: v2.0.0 (1.3.0 → 2.0.0)
+
+# Features → Minor Version
+## [Unreleased]
+### 🆕 Added
+- User authentication system
+- Email notifications
+
+# Output: v1.4.0 (1.3.0 → 1.4.0)
+
+# Fixes → Patch Version
+## [Unreleased]
+### ✅ Fixed
+- Login validation issues
+- Mobile navigation bugs
+
+# Output: v1.3.1 (1.3.0 → 1.3.1)
+```
+
+**Keep a Changelog v1.1.0 Compliance:**
+- Unreleased section at top for tracking upcoming changes
+- **Automatic version creation** with `/smartcommit.release`
+- Proper chronological order with latest version first
+- Semantic versioning based on change types
+
+SmartCommit analyzes changelog content and creates versions automatically:
 
 ```markdown
 # Changelog
@@ -69,11 +116,6 @@ SmartCommit automatically creates CHANGELOG.md in project root if it doesn't exi
 - Login validation issues on mobile devices
 ```
 
-**Keep a Changelog v1.1.0 Compliance:**
-- Unreleased section at top for tracking upcoming changes
-- Manual version creation when ready for release
-- Proper chronological order with latest version first
-
 ## Usage Examples
 
 ### New Feature Development
@@ -89,6 +131,10 @@ git add .
 # Output: "feat(auth): Add user authentication system"
 
 # 4. Done! Changelog updated automatically
+
+# 5. When ready for release:
+/smartcommit.release
+# Output: "Version [1.4.0] - 2025-11-14 created from [Unreleased] entries"
 ```
 
 ### Bug Fix Process
@@ -104,6 +150,30 @@ git add .
 # Output: "fix(auth): Resolve login validation for special characters"
 
 # 4. Changelog updated automatically
+
+# 5. Create patch release:
+/smartcommit.release
+# Output: "Version [1.3.1] - 2025-11-14 created from [Unreleased] entries"
+```
+
+### Release Process
+```bash
+# 1. Ensure all changes are committed
+git status  # Should be clean
+
+# 2. Check [Unreleased] section
+cat CHANGELOG.md | grep -A 10 "## \[Unreleased\]"
+
+# 3. Preview release
+/smartcommit.release --dry-run
+# Output: "🎯 Version bump: patch (1.3.0 → 1.3.1)"
+
+# 4. Create release
+/smartcommit.release
+# Output: "✅ Version [1.3.1] - 2025-11-14 created, git tag v1.3.1 created"
+
+# 5. Push tag to remote
+git push origin v1.3.1
 ```
 
 ### Documentation Update
@@ -149,7 +219,9 @@ Create `smartcommit.json` in your project root:
 
 ## Command Options
 
-### Standard Usage
+### Commit Command
+
+#### Standard Usage
 ```bash
 /smartcommit.commit
 ```
@@ -158,7 +230,7 @@ Create `smartcommit.json` in your project root:
 - Updates changelog if needed
 - Executes commit
 
-### Dry Run Mode
+#### Dry Run Mode
 ```bash
 /smartcommit.commit --dry-run
 ```
@@ -167,13 +239,50 @@ Create `smartcommit.json` in your project root:
 - Indicates changelog update status
 - No changes made to repository
 
-### Custom Message
+#### Custom Message
 ```bash
 /smartcommit.commit "Custom commit message"
 ```
 - Uses provided message instead of generated one
 - Still analyzes changes for context
 - Updates changelog if needed
+
+### Release Command
+
+#### Automatic Version Detection
+```bash
+/smartcommit.release
+```
+- Analyzes [Unreleased] section
+- Determines semantic version bump
+- Creates version section with current date
+- Creates git tag automatically
+- Clears [Unreleased] section
+
+#### Dry Run Mode
+```bash
+/smartcommit.release --dry-run
+```
+- Analyzes [Unreleased] entries
+- Shows proposed version bump
+- No changes made to changelog
+- No git tag created
+
+#### Specific Version
+```bash
+/smartcommit.release --version=2.0.0
+```
+- Forces specific version number
+- Bypasses automatic version detection
+- Creates git tag with specified version
+
+#### Force Version Type
+```bash
+/smartcommit.release --type=major|minor|patch
+```
+- Forces specific version bump type
+- Useful for pre-releases or special cases
+- Ignores automatic change type detection
 
 ## Best Practices
 
