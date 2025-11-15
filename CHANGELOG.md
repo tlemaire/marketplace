@@ -5,6 +5,16 @@ All notable changes to the marketplace plugins will be documented in this file.
 The format is based on **[Keep a Changelog v1.1.0](https://keepachangelog.com/en/1.1.0/)**,
 and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0.0.html)**.
 
+## [Unreleased]
+
+### 🆕 Added
+- **Complete Claude Proxy Infrastructure**: Full Express.js server with TypeScript configuration and multi-provider support
+- **GLM 4.6 Production Ready**: Complete project infrastructure supporting all AI providers (vLLM, Ollama, OpenAI, GLM)
+- **API Routes & Handlers**: Anthropic-compatible endpoints with streaming support and error handling
+- **Performance Monitoring**: Built-in benchmarking and performance tracking utilities
+- **Configuration Templates**: Environment examples for vLLM H100, Ollama, and multi-provider setups
+- **Development Tooling**: Complete TypeScript build system with testing and linting scripts
+
 ## [1.4.0] - 2025-11-15
 
 ### 🆕 Added
