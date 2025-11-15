@@ -5,7 +5,7 @@ All notable changes to the marketplace plugins will be documented in this file.
 The format is based on **[Keep a Changelog v1.1.0](https://keepachangelog.com/en/1.1.0/)**,
 and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0.0.html)**.
 
-## [Unreleased]
+## [1.5.0] - 2025-11-15
 
 ### 🆕 Added
 - **Complete Claude Proxy Infrastructure**: Full Express.js server with TypeScript configuration and multi-provider support
@@ -14,6 +14,11 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 - **Performance Monitoring**: Built-in benchmarking and performance tracking utilities
 - **Configuration Templates**: Environment examples for vLLM H100, Ollama, and multi-provider setups
 - **Development Tooling**: Complete TypeScript build system with testing and linting scripts
+
+### 🔄 Changed
+- **Marketplace Documentation**: Updated main README.md to include Claude Proxy project with GLM 4.6 integration
+- **Project Structure**: Enhanced plugin structure section to reflect both plugins and complete projects
+- **Navigation**: Added Claude Proxy links to documentation section for better discoverability
 
 ## [1.4.0] - 2025-11-15
 
