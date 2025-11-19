@@ -11,7 +11,7 @@ This is the **SDD (Spec-Driven Development) plugin** - a Claude Code marketplace
 **Version**: 1.0.0
 **License**: MIT
 **Author**: Thierry Lemaire
-**Marketplace**: thierry-lemaire-marketplace
+**Marketplace**: marketplace
 **Commands**: 9 SDD workflow commands
 **Size**: 13 files, optimized for marketplace distribution
 
@@ -178,7 +178,7 @@ shortcut: sdd.command_name
 **Installation:**
 ```bash
 claude plugin marketplace add https://github.com/tlemaire/marketplace
-claude plugin install sdd@thierry-lemaire-marketplace
+claude plugin install sdd@marketplace
 ```
 
 **Quick Start:**

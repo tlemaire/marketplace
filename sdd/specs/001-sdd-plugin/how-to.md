@@ -7,7 +7,7 @@ Create a fully functional application using the systematic SDD workflow, from in
 
 ## 📋 Prerequisites
 - Claude Code installed and configured
-- SDD plugin installed (`claude plugin install sdd@thierry-lemaire-marketplace`)
+- SDD plugin installed (`claude plugin install sdd@marketplace`)
 - Git repository initialized (recommended)
 - Clear application idea in mind
 

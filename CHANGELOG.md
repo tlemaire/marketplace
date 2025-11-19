@@ -103,7 +103,7 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 ### 🔄 Changed
 - **Marketplace Configuration**: Simplified with single "category" field instead of "categories" array
 - **SmartCommit Design**: Streamlined to single command approach with automatic commit execution
-- **Marketplace Naming**: Updated from "thierry-lemaire-marketplace" to "marketplace"
+- **Marketplace Naming**: Restored marketplace name to "marketplace" for simpler installation syntax
 
 ## [1.0.0] - 2024-10-01
 
