@@ -5,6 +5,24 @@ All notable changes to the marketplace plugins will be documented in this file.
 The format is based on **[Keep a Changelog v1.1.0](https://keepachangelog.com/en/1.1.0/)**,
 and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0.0.html)**.
 
+## [Unreleased]
+
+### 🆕 Added
+- **SDD-Enhanced Memory System**: Complete `.specify/memory/` directory structure with constitution management
+- **SDD Structure Validation**: New `/sdd.validate` command for compliance checking and auto-fixing
+- **Comprehensive Quality Checklists**: Requirements, UX, performance, accessibility, and security validation templates
+- **Complete Sample Projects**: All sample projects restructured to follow SDD methodology with proper specifications
+- **Project Configuration Templates**: `.env.example` and `Makefile` templates for all project types
+- **Enhanced Commands Structure**: Commands organized into `core/` and `quality/` directories for better organization
+
+### 🔄 Changed
+- **Commands Enforcement**: All commands now create and enforce SDD-compliant project structure
+- **Constitution Management**: Updated to create `.specify/memory/constitution.md` as primary location
+- **Specification Generation**: Enhanced `/sdd.specify` to generate complete feature structures
+- **Workflow Integration**: Added validation steps throughout the SDD development workflow
+- **Template System**: Comprehensive SDD structure templates for consistent project generation
+- **Documentation Organization**: Improved documentation structure and cross-references
+
 ## [1.5.0] - 2025-11-15
 
 ### 🆕 Added
