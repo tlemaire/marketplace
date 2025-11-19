@@ -5,7 +5,7 @@ All notable changes to the marketplace plugins will be documented in this file.
 The format is based on **[Keep a Changelog v1.1.0](https://keepachangelog.com/en/1.1.0/)**,
 and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0.0.html)**.
 
-## [Unreleased]
+## [1.6.0] - 2025-11-19
 
 ### 🆕 Added
 - **SDD-Enhanced Memory System**: Complete `.specify/memory/` directory structure with constitution management
@@ -22,6 +22,8 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 - **Workflow Integration**: Added validation steps throughout the SDD development workflow
 - **Template System**: Comprehensive SDD structure templates for consistent project generation
 - **Documentation Organization**: Improved documentation structure and cross-references
+
+## [Unreleased]
 
 ## [1.5.0] - 2025-11-15
 
