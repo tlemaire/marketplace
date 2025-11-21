@@ -48,20 +48,33 @@ claude plugin install sdd@marketplace
 
 ### 🤖 SmartCommit
 
-Intelligent commit message generation with automatic changelog management and commit execution.
+**Claude-Native intelligent git workflow automation** - analyze changes, generate commits, manage changelogs, and create releases.
 
 **🔥 Key Features:**
-- Generate intelligent commit messages following conventional commit format
-- Automatic global CHANGELOG.md creation and management
-- Smart change categorization (Features, Improvements, Bug Fixes, etc.)
-- Automatic git commit execution with proper attribution
-- Zero configuration required - works out of the box
+- **Claude-Native Architecture**: Direct Claude execution with no Python complexity
+- **Intelligent Analysis**: Smart git state detection and change categorization
+- **Automatic Commit Generation**: Conventional commit messages based on file types
+- **Changelog Management**: Automatic CHANGELOG.md updates with proper entries
+- **Release Automation**: Semantic versioning and git tag creation
+- **Zero Configuration**: Works out of the box with KISS principles
+
+**🚀 Modes of Operation:**
+- **🔄 Development Mode**: Analyze staged changes → Generate commit → Update changelog → Execute
+- **🚀 Release Mode**: Clean tree + [Unreleased] entries → Create version → Generate tag
+- **📋 Setup Mode**: No CHANGELOG.md → Initialize project structure
 
 **⚡ Quick Start**:
 ```bash
 claude plugin install smartcommit@marketplace
+
+# Make your changes
 git add .
+
+# SmartCommit handles everything intelligently
 /smartcommit.commit
+
+# Preview actions safely
+/smartcommit.commit --dry-run
 ```
 
 **📚 Documentation**: See [smartcommit/README.md](smartcommit/README.md) for complete details and usage examples.
@@ -206,9 +219,9 @@ marketplace/
 │   ├── 📚 samples/           # 🆕 TDD-enhanced example projects by complexity
 │   ├── 📝 templates/         # 🆕 Project templates and checklists
 │   └── 📖 README.md          # Complete SDD + TDD documentation
-├── 🤖 smartcommit/           # SmartCommit plugin
-│   ├── 💬 commands/          # Commit generation commands
-│   ├── 📚 samples/           # Usage examples and configurations
+├── 🤖 smartcommit/           # SmartCommit plugin (Claude-Native)
+│   ├── 💬 commands/          # Single command with embedded Claude logic
+│   ├── 📚 samples/           # Usage examples (simple, multi-language, enterprise)
 │   └── 📖 README.md          # SmartCommit documentation
 └── 🌐 claude-proxy/          # Multi-Provider AI Integration
     ├── 🔧 src/               # TypeScript source code
