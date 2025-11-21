@@ -3,31 +3,9 @@ description: Complete git workflow - commit changes, manage changelog, create re
 shortcut: smartcommit.commit
 ---
 
-# Smart Commit Command
+I'll automatically execute the SmartCommit workflow by running the implementation script.
 
-**Complete git workflow in one command** - intelligently commits changes, manages changelog, and creates releases automatically based on your development context.
-
-## What it does automatically:
-
-### 🔄 **Development Mode** (Default)
-When you have staged changes:
-1. **Analyze changes** - Categorize by type and impact
-2. **Generate commit message** - Follow conventional commit format
-3. **Update changelog** - Add entries to [Unreleased] section
-4. **Execute commit** - Commit with attribution
-
-### 🚀 **Release Mode** (Auto-detected)
-When working tree is clean but [Unreleased] has entries:
-1. **Analyze [Unreleased]** - Check for version-worthy changes
-2. **Determine version bump** - Auto semantic versioning (major/minor/patch)
-3. **Create version** - Move [Unreleased] entries to versioned section
-4. **Generate git tag** - Create version tag automatically
-5. **Push ready** - Provide git push instructions
-
-### 📋 **Setup Mode** (First run)
-When no CHANGELOG.md exists:
-1. **Create CHANGELOG.md** - Initialize with proper structure
-2. **Setup project** - Ready for smart workflow
+Running: python3 /home/thierry-lemaire/Documents/Devs/claude/marketplace/smartcommit/scripts/auto_commit.py "$@"
 
 ## Usage Examples
 
