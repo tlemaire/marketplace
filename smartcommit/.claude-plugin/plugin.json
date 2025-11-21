@@ -1,7 +1,7 @@
 {
   "name": "smartcommit",
-  "description": "Complete git workflow automation - intelligent commits, changelog management, and releases with implementation scripts",
-  "version": "1.1.0",
+  "description": "Complete git workflow automation - intelligent commits, changelog management, and releases in a single command",
+  "version": "1.2.0",
   "license": "MIT",
   "homepage": "https://github.com/tlemaire/marketplace",
   "author": {
@@ -9,6 +9,5 @@
     "email": "thierry.lemaire@gmail.com"
   },
   "commands": "./commands",
-  "scripts": "./scripts",
   "samples": "./samples"
 }
