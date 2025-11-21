@@ -46,6 +46,13 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ## [Unreleased]
 
+### 🔄 Changed
+- **SmartCommit Refactor**: Simplify architecture with Claude-native implementation
+- Remove Python script complexity in favor of direct Claude execution logic
+- Delete unnecessary scripts directory following KISS principles
+- Update plugin metadata to version 1.2.0 with streamlined structure
+- Enhance command file to leverage Claude's native capabilities for git workflow automation
+
 ### 📚 Documentation
 - Update documentation
 - Update documentation
