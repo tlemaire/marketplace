@@ -13,25 +13,34 @@ Create a fully functional application using the systematic SDD workflow, from in
 
 ---
 
-## 🚀 QUICK REFERENCE: The Complete SDD Workflow
+## 🚀 QUICK REFERENCE: The Complete SDD + TDD Workflow
 
 ```
+# CORE SDD WORKFLOW
 1. /sdd.help                    # Get help and understand workflow
 2. /sdd.constitution "[principles]"  # Set project principles
 3. /sdd.specify "[description]"     # Create detailed specification
 4. /sdd.clarify                     # Resolve ambiguities (if needed)
 5. /sdd.plan "[tech-stack]"         # Create technical plan
-6. /sdd.tasks                       # Generate implementation tasks
-7. /sdd.checklist "[types]"         # Create quality checklists
-8. /sdd.analyze                     # Analyze consistency (optional)
-9. /sdd.implement                   # Execute implementation
+
+# TDD INTEGRATION WORKFLOW
+6. /sdd.tdd.specify "[focus]"       # Create test specifications
+7. /sdd.tdd.design "[frameworks]"   # Design test architecture
+
+# IMPLEMENTATION WORKFLOW
+8. /sdd.tasks                       # Generate implementation tasks
+9. /sdd.checklist "[types]"         # Create quality checklists
+10. /sdd.tdd.implement "[phase]"    # Guide TDD implementation
+11. /sdd.analyze                     # Analyze consistency (optional)
+12. /sdd.implement                   # Execute implementation
+13. /sdd.tdd.coverage "[format]"     # Analyze test coverage
 ```
 
-## 📊 VISUAL WORKFLOW: Complete SDD Process
+## 📊 VISUAL WORKFLOW: Complete SDD + TDD Process
 
 ```mermaid
 flowchart TD
-    A[🚀 Start SDD Project] --> B[Get Help & Understand Workflow]
+    A[🚀 Start SDD + TDD Project] --> B[Get Help & Understand Workflow]
     B --> C[/sdd.help/]
     C --> D[🏛️ Define Project Principles]
     D --> E[/sdd.constitution "principles"/]
@@ -42,29 +51,44 @@ flowchart TD
     H -->|No| J[🏗️ Create Technical Plan]
     I --> J
     J --> K[/sdd.plan "tech-stack"/]
-    K --> L[📝 Generate Implementation Tasks]
-    L --> M[/sdd.tasks/]
-    M --> N[✅ Create Quality Checklists]
-    N --> O[/sdd.checklist "types"/]
-    O --> P{📊 Analyze Consistency?}
-    P -->|Yes| Q[/sdd.analyze/]
-    P -->|No| R[🚀 Execute Implementation]
-    Q --> R
-    R --> S[/sdd.implement/]
-    S --> T[🎉 Production-Ready Application]
 
-    T --> U{🔄 Evolution Needed?}
-    U -->|Yes| V[Start Evolution Workflow]
-    U -->|No| W[✅ Project Complete]
+    K --> L[🧪 Create Test Specifications]
+    L --> M[/sdd.tdd.specify "focus"/]
+    M --> N[🏛️ Design Test Architecture]
+    N --> O[/sdd.tdd.design "frameworks"/]
 
-    V --> X[See Evolution Workflow Below]
+    O --> P[📝 Generate Implementation Tasks]
+    P --> Q[/sdd.tasks/]
+    Q --> R[✅ Create Quality Checklists]
+    R --> S[/sdd.checklist "types"/]
+
+    S --> T{📊 Analyze Consistency?}
+    T -->|Yes| U[/sdd.analyze/]
+    T -->|No| V[🧪 Guide TDD Implementation]
+    U --> V
+
+    V --> W[/sdd.tdd.implement "phase"/]
+    W --> X[🚀 Execute Implementation]
+    X --> Y[/sdd.implement/]
+    Y --> Z[📊 Analyze Test Coverage]
+    Z --> AA[/sdd.tdd.coverage "format"/]
+    AA --> BB[🎉 Production-Ready Application]
+
+    BB --> CC{🔄 Evolution Needed?}
+    CC -->|Yes| DD[Start Evolution Workflow]
+    CC -->|No| EE[✅ Project Complete]
+
+    DD --> FF[See Evolution Workflow Below]
 
     style A fill:#e1f5fe
-    style T fill:#c8e6c9
-    style W fill:#c8e6c9
+    style BB fill:#c8e6c9
+    style EE fill:#c8e6c9
     style H fill:#fff3e0
-    style P fill:#fff3e0
-    style U fill:#fff3e0
+    style T fill:#fff3e0
+    style CC fill:#fff3e0
+    style L fill:#f3e5f5
+    style N fill:#f3e5f5
+    style Z fill:#f3e5f5
 ```
 
 ---
@@ -312,7 +336,112 @@ specs/001-feature-name/
 
 ---
 
-### Step 6: Generate Implementation Tasks
+### Step 6: Create Test Specifications (TDD Integration)
+
+**What you must enter:**
+```bash
+/sdd.tdd.specify "unit,integration,e2e,security,performance"
+```
+
+**Alternative TDD specification options:**
+
+**For Simple Projects:**
+```bash
+/sdd.tdd.specify "unit"
+```
+
+**For Web Applications:**
+```bash
+/sdd.tdd.specify "unit,integration,e2e"
+```
+
+**For Enterprise Applications:**
+```bash
+/sdd.tdd.specify "unit,integration,e2e,security,performance,accessibility"
+```
+
+**What SDD does:**
+- Analyzes your feature specification to extract testable requirements
+- Defines comprehensive test coverage targets by criticality level
+- Identifies testing strategies for different feature types
+- Creates test architecture recommendations
+- Generates test quality checklists and validation criteria
+- Establishes performance benchmarks and security testing requirements
+
+**Expected Output Files:**
+```
+specs/001-feature-name/
+├── tdd-spec.md          # Comprehensive test specifications
+├── tdd-requirements.md  # Test requirements by feature
+└── test-criteria.md     # Quality criteria and thresholds
+```
+
+**Key Contents of tdd-spec.md:**
+- Test coverage requirements (statements, branches, functions, lines)
+- Testing strategy (unit 70%, integration 20%, E2E 10%)
+- Test organization structure and naming conventions
+- Mock and fixture strategies
+- Quality gates and validation criteria
+- Performance and security testing requirements
+
+---
+
+### Step 7: Design Test Architecture
+
+**What you must enter:**
+```bash
+/sdd.tdd.design "jest,playwright,cypress,testing-library"
+```
+
+**Alternative test architecture options:**
+
+**Simple JavaScript Stack:**
+```bash
+/sdd.tdd.design "jest,vitest,jest-dom"
+```
+
+**React/TypeScript Stack:**
+```bash
+/sdd.tdd.design "jest,@testing-library/react,playwright,mock-service-worker"
+```
+
+**Enterprise Stack:**
+```bash
+/sdd.tdd.design "jest,cypress,playwright,testing-library,storybook,msw,jest-extended"
+```
+
+**What SDD does:**
+- Configures testing frameworks based on your technology stack
+- Defines test organization structure and file hierarchy
+- Creates mock architecture and fixture strategies
+- Plans CI/CD integration for automated testing
+- Establishes test data management strategies
+- Configures coverage reporting and quality gates
+
+**Expected Output Files:**
+```
+specs/001-feature-name/
+├── tdd-architecture.md  # Complete test architecture design
+├── test-config/         # Testing framework configurations
+│   ├── jest.config.js
+│   ├── playwright.config.ts
+│   └── cypress.config.ts
+└── ci-templates/        # CI/CD integration templates
+    ├── github-actions.yml
+    └── gitlab-ci.yml
+```
+
+**Key Contents of tdd-architecture.md:**
+- Testing framework configurations and setup
+- Test file organization and naming patterns
+- Mock strategies for external dependencies
+- Test data management and fixture patterns
+- CI/CD pipeline integration for automated testing
+- Coverage reporting and quality gate configuration
+
+---
+
+### Step 8: Generate Implementation Tasks
 
 **What you must enter:**
 ```bash
@@ -320,57 +449,61 @@ specs/001-feature-name/
 ```
 
 **What SDD does:**
-- Analyzes your specification and technical plan
+- Analyzes your specification, technical plan, and TDD specifications
 - Breaks down the entire project into 25 actionable tasks
 - Organizes tasks by dependencies (what must be done first)
 - Estimates effort and complexity for each task
 - Creates logical development phases
 - Identifies parallel work opportunities
 - Generates task assignment suggestions
+- **NEW**: Includes TDD tasks for test implementation
 
 **Expected Output Files:**
 ```
 specs/001-feature-name/
-└── tasks.md             # 25 dependency-organized tasks
+└── tasks.md             # 25 dependency-organized tasks (now with TDD integration)
 ```
 
-**Task Organization:**
-- **Phase 1: Foundation** (Tasks 1-5) - Setup, database, authentication
-- **Phase 2: Core Features** (Tasks 6-15) - Main functionality
-- **Phase 3: Advanced Features** (Tasks 16-22) - Enhanced capabilities
-- **Phase 4: Polish & Deploy** (Tasks 23-25) - Testing, deployment, documentation
+**Task Organization (Enhanced with TDD):**
+- **Phase 1: Foundation & Testing Setup** (Tasks 1-5) - Setup, database, authentication, testing framework
+- **Phase 2: Core Features & Unit Tests** (Tasks 6-15) - Main functionality with comprehensive unit tests
+- **Phase 3: Advanced Features & Integration Tests** (Tasks 16-22) - Enhanced capabilities with integration tests
+- **Phase 4: Polish, E2E Tests & Deploy** (Tasks 23-25) - E2E testing, deployment, documentation, coverage analysis
 
-**Example Task Structure:**
+**Example Task Structure (Enhanced with TDD):**
 ```
-# Task 1: Project Setup and Configuration
-**Effort**: 2 hours | **Dependencies**: None
+# Task 1: Project Setup and Testing Framework
+**Effort**: 3 hours | **Dependencies**: None
 - Initialize React project with TypeScript
 - Configure development environment
-- Set up testing framework
-- Establish CI/CD pipeline
+- Set up testing frameworks (Jest, Playwright, Testing Library)
+- Establish CI/CD pipeline with test automation
+- Configure coverage reporting and quality gates
 
-# Task 2: Database Design and Implementation
-**Effort**: 4 hours | **Dependencies**: Task 1
+# Task 2: Database Design and Test Implementation
+**Effort**: 5 hours | **Dependencies**: Task 1
 - Design database schema
 - Set up PostgreSQL connection
 - Implement migration scripts
 - Create seed data
+- Write database unit and integration tests
 ```
 
 ---
 
-### Step 7: Create Quality Assurance Checklists
+### Step 9: Create Quality Assurance Checklists
 
 **What you must enter:**
 ```bash
-/sdd.checklist "requirements, UX, performance, accessibility, security"
+/sdd.checklist "requirements, UX, performance, accessibility, security, testing"
 ```
 
 **Alternative checklist options:**
 ```bash
 /sdd.checklist "all"                    # Complete checklists for everything
-/sdd.checklist "requirements, testing"  # Focus on validation
+/sdd.checklist "requirements, testing"  # Focus on validation and testing
 /sdd.checklist "performance, security"  # Focus on production readiness
+/sdd.checklist "testing, coverage"      # Focus on TDD quality validation
 ```
 
 **What SDD does:**
@@ -380,6 +513,7 @@ specs/001-feature-name/
 - Establishes performance benchmarks
 - Defines security audit procedures
 - Creates accessibility testing guidelines
+- **NEW**: Includes TDD-specific quality gates and coverage requirements
 
 **Expected Output Files:**
 ```
@@ -388,7 +522,9 @@ specs/001-feature-name/checklists/
 ├── ux.md               # User experience testing checklist
 ├── performance.md      # Performance benchmarks and testing
 ├── accessibility.md    # Accessibility compliance checklist
-└── security.md         # Security validation checklist
+├── security.md         # Security validation checklist
+├── testing.md          # TDD testing strategy and validation
+└── coverage.md         # Test coverage requirements and thresholds
 ```
 
 **Each Checklist Contains:**
@@ -397,11 +533,62 @@ specs/001-feature-name/checklists/
 - User acceptance testing procedures
 - Performance benchmark criteria
 - Security validation steps
+- **NEW**: Test coverage validation criteria
+- **NEW**: TDD quality gates and validation steps
 - Post-deployment monitoring requirements
 
 ---
 
-### Step 8: Analyze Consistency (Optional but Recommended)
+### Step 10: Guide TDD Implementation
+
+**What you must enter:**
+```bash
+/sdd.tdd.implement "all"
+```
+
+**Alternative TDD implementation options:**
+
+**Focus on Red-Green-Refactor:**
+```bash
+/sdd.tdd.implement "red-green-refactor"
+```
+
+**Focus on Specific Phase:**
+```bash
+/sdd.tdd.implement "unit"        # Guide unit test implementation
+/sdd.tdd.implement "integration" # Guide integration test implementation
+/sdd.tdd.implement "e2e"         # Guide E2E test implementation
+```
+
+**What SDD does:**
+- Provides comprehensive TDD implementation guidance
+- Generates failing test templates (Red phase)
+- Guides minimal implementation to pass tests (Green phase)
+- Provides refactoring guidance with test safety (Refactor phase)
+- Creates test data builders and factory patterns
+- Generates implementation task lists with TDD integration
+- Provides mock and fixture creation guidance
+
+**Expected Output Files:**
+```
+specs/001-feature-name/tdd-guidance/
+├── red-phase-templates/     # Failing test templates
+├── green-phase-guidance.md  # Minimal implementation guidance
+├── refactor-patterns.md     # Safe refactoring with tests
+├── test-data-builders.js    # Test data factory functions
+└── implementation-tasks.md  # TDD-enhanced implementation tasks
+```
+
+**Key TDD Guidance Components:**
+- Red-Green-Refactor cycle examples for your specific features
+- Test template patterns for different component types
+- Mock strategies for external dependencies
+- Test data management and factory patterns
+- Refactoring safety nets with comprehensive test coverage
+
+---
+
+### Step 11: Analyze Consistency (Optional but Recommended)
 
 **What you must enter:**
 ```bash
@@ -409,22 +596,24 @@ specs/001-feature-name/checklists/
 ```
 
 **What SDD does:**
-- Cross-references specification, plan, and constitution
-- Identifies contradictions or misalignments
-- Validates that technical plan supports all requirements
-- Checks that constitution principles are followed
-- Identifies missing components or gaps
+- Cross-references specification, plan, TDD specifications, and constitution
+- Identifies contradictions or misalignments between requirements and testing strategy
+- Validates that technical plan supports all requirements AND testing requirements
+- Checks that constitution principles are followed in both implementation and testing
+- Identifies missing components or gaps in testing coverage
 - Provides consistency score and recommendations
+- **NEW**: Validates TDD integration alignment with SDD methodology
 
 **Expected Output:**
-- Consistency analysis report
-- Identified issues and resolutions
-- Recommendations for improvements
-- Validation that all pieces work together
+- Consistency analysis report (enhanced with TDD validation)
+- Identified issues and resolutions (including testing gaps)
+- Recommendations for improvements (including testing enhancements)
+- Validation that all pieces work together (including testing integration)
+- TDD alignment assessment and optimization suggestions
 
 ---
 
-### Step 9: Execute Implementation
+### Step 12: Execute Implementation
 
 **What you must enter:**
 ```bash
@@ -432,37 +621,102 @@ specs/001-feature-name/checklists/
 ```
 
 **What SDD does:**
-- Executes all 25 tasks in dependency order
+- Executes all 25 tasks in dependency order (now enhanced with TDD integration)
 - Creates Git branches for feature development (if Git enabled)
 - Generates all necessary code files
-- Implements database schemas
-- Creates API endpoints
-- Builds user interfaces
-- Implements business logic
-- Runs quality checklists
-- Provides progress updates
+- Implements database schemas with test migrations
+- Creates API endpoints with integration test scaffolding
+- Builds user interfaces with component test templates
+- Implements business logic with comprehensive unit test coverage
+- Runs quality checklists (including TDD validation)
+- Provides progress updates with testing milestones
+- **NEW**: Generates failing tests first (Red phase), then implements minimal code (Green phase)
 
 **Expected Output:**
-- Complete application codebase
+- Complete application codebase with comprehensive test coverage
 - Git repository with proper branch structure
 - All source files, configurations, and documentation
-- Running application (if dependencies permit)
-- Deployment-ready artifacts
+- **NEW**: Complete test suite with unit, integration, and E2E tests
+- **NEW**: Test configuration files and CI/CD integration
+- **NEW**: Coverage reporting and quality gate configuration
+- Running application with passing test suite (if dependencies permit)
+- Deployment-ready artifacts with testing validation
 
-**Generated Application Structure:**
+**Generated Application Structure (Enhanced with TDD):**
 ```
 my-awesome-app/
 ├── src/                    # Application source code
+├── tests/                  # Complete test suite
+│   ├── unit/              # Unit tests
+│   ├── integration/       # Integration tests
+│   ├── e2e/              # End-to-end tests
+│   ├── __mocks__/        # Mocks and fixtures
+│   └── setup/            # Test configuration
 ├── public/                 # Static assets
-├── tests/                  # Test files
 ├── docs/                   # Documentation
 ├── config/                 # Configuration files
+│   ├── jest.config.js     # Unit test configuration
+│   ├── playwright.config.ts # E2E test configuration
+│   └── coverage.json      # Coverage configuration
 ├── scripts/                # Build and deployment scripts
 ├── .env.example           # Environment variables template
-├── package.json           # Dependencies and scripts
+├── package.json           # Dependencies and test scripts
 ├── README.md              # Application documentation
-└── Makefile               # Development automation
+├── .github/               # CI/CD workflows with testing
+└── Makefile               # Development automation with test commands
 ```
+
+---
+
+### Step 13: Analyze Test Coverage
+
+**What you must enter:**
+```bash
+/sdd.tdd.coverage "html"
+```
+
+**Alternative coverage analysis options:**
+
+**Generate Different Formats:**
+```bash
+/sdd.tdd.coverage "html,json,lcov"    # Multiple formats
+/sdd.tdd.coverage "json"              # JSON for CI/CD integration
+/sdd.tdd.coverage "text"              # Simple text summary
+```
+
+**Coverage with Thresholds:**
+```bash
+/sdd.tdd.coverage "html" --threshold 85  # Set 85% minimum coverage
+/sdd.tdd.coverage "json" --detailed      # Detailed coverage analysis
+```
+
+**What SDD does:**
+- Runs complete test suite and generates coverage reports
+- Analyzes coverage against TDD specification requirements
+- Identifies coverage gaps and provides recommendations
+- Validates coverage thresholds by criticality level
+- Generates coverage trend analysis and improvement suggestions
+- Creates coverage compliance reports for quality gates
+
+**Expected Output Files:**
+```
+my-awesome-app/coverage/
+├── lcov.info               # LCOV format for CI/CD tools
+├── coverage-final.json     # JSON coverage data
+├── lcov-report/           # HTML coverage report
+│   ├── index.html         # Main coverage dashboard
+│   ├── src/               # Source file coverage details
+│   └── assets/            # Report assets
+└── coverage-summary.txt   # Text summary report
+```
+
+**Coverage Analysis Includes:**
+- Statement, branch, function, and line coverage percentages
+- Coverage breakdown by file and directory
+- Coverage trends and historical analysis
+- Gap analysis with specific uncovered lines
+- Recommendations for improving coverage
+- Compliance validation against TDD specification requirements
 
 ---
 
@@ -501,24 +755,44 @@ A collaborative task management application for small teams.
 /sdd.plan "React with TypeScript, Next.js for SSR, Tailwind CSS for styling, Prisma with PostgreSQL, Socket.IO for real-time, AWS S3 for file storage, Resend for emails, Vercel for hosting"
 ```
 
-**Step 6: Generate Tasks**
+**Step 6: Create Test Specifications**
+```bash
+/sdd.tdd.specify "unit,integration,e2e,security,performance"
+```
+
+**Step 7: Design Test Architecture**
+```bash
+/sdd.tdd.design "jest,@testing-library/react,playwright,mock-service-worker"
+```
+
+**Step 8: Generate Tasks**
 ```bash
 /sdd.tasks
 ```
 
-**Step 7: Create Checklists**
+**Step 9: Create Checklists**
 ```bash
 /sdd.checklist "all"
 ```
 
-**Step 8: Analyze Consistency**
+**Step 10: Guide TDD Implementation**
+```bash
+/sdd.tdd.implement "all"
+```
+
+**Step 11: Analyze Consistency**
 ```bash
 /sdd.analyze
 ```
 
-**Step 9: Implement**
+**Step 12: Implement**
 ```bash
 /sdd.implement
+```
+
+**Step 13: Analyze Coverage**
+```bash
+/sdd.tdd.coverage "html,json"
 ```
 
 ### Expected Final Result:
@@ -530,9 +804,13 @@ A complete, production-ready task management application with:
 - Time tracking and reporting
 - Email notifications
 - Mobile-responsive design
-- 95% test coverage
-- Accessibility compliance
-- Deployed to Vercel with proper CI/CD
+- **95%+ test coverage** (unit, integration, and E2E)
+- **Comprehensive TDD implementation** with Red-Green-Refactor cycles
+- **Automated testing in CI/CD** pipeline
+- **Coverage reporting and quality gates**
+- **Performance and security testing**
+- **Accessibility compliance with automated tests**
+- **Deployed to Vercel with proper CI/CD and testing validation**
 
 ---
 
@@ -562,6 +840,16 @@ A complete, production-ready task management application with:
 3. **Commit Often**: Save your progress regularly
 4. **Ask Questions**: Use `/sdd.help` whenever you're unsure
 
+### TDD-Specific Best Practices:
+1. **Write Failing Tests First**: Always start with Red phase - write tests that fail
+2. **Implement Minimal Code**: Green phase - write just enough code to make tests pass
+3. **Refactor Confidently**: Refactor phase - improve code with tests as safety net
+4. **Focus on Test Coverage**: Aim for 90%+ coverage across all critical components
+5. **Test Edge Cases**: Don't just test happy paths - test error conditions and edge cases
+6. **Use Meaningful Test Names**: Test names should describe what they're testing
+7. **Maintain Test Independence**: Tests should not depend on each other
+8. **Mock External Dependencies**: Use mocks for APIs, databases, and external services
+
 ### Common Pitfalls to Avoid:
 
 ❌ **Vague Specifications**: "Build a social media app"
@@ -574,7 +862,27 @@ A complete, production-ready task management application with:
 ✅ **Thorough Analysis**: Resolve all ambiguities before implementation
 
 ❌ **Missing Quality Steps**: Skipping checklists and analysis
-✅ **Complete Workflow**: Follow all 9 steps for best results
+✅ **Complete Workflow**: Follow all 13 steps for best results
+
+### TDD-Specific Pitfalls to Avoid:
+
+❌ **Writing Tests After Code**: Implementing features first, then adding tests
+✅ **Test-First Development**: Always write failing tests before implementation
+
+❌ **Low Test Coverage**: Only testing happy paths and basic functionality
+✅ **Comprehensive Testing**: Test edge cases, error conditions, and failure scenarios
+
+❌ **Brittle Tests**: Tests that break when implementation details change
+✅ **Behavioral Testing**: Test behavior and outcomes, not implementation specifics
+
+❌ **Slow Test Suite**: E2E tests for everything, making test runs take hours
+✅ **Test Pyramid**: 70% unit tests, 20% integration tests, 10% E2E tests
+
+❌ **Ignoring Test Failures**: Allowing failing tests to persist in codebase
+✅ **Zero-Tolerance Policy**: All tests must pass before merging/deployment
+
+❌ **Testing Implementation Details**: Tests that break when you refactor code
+✅ **Testing Public Interface**: Test what users interact with, not internal code
 
 ---
 
@@ -600,11 +908,23 @@ Your SDD workflow is successful when:
 - ✅ All quality checklists pass
 - ✅ Application meets specification requirements
 
+### TDD Implementation Quality:
+- ✅ Comprehensive test coverage (90%+ statements, 85%+ branches)
+- ✅ Test pyramid properly balanced (70% unit, 20% integration, 10% E2E)
+- ✅ All tests pass consistently in CI/CD pipeline
+- ✅ Tests run quickly and provide fast feedback
+- ✅ Test suite is maintainable and well-organized
+- ✅ Red-Green-Refactor cycle followed throughout development
+
 ### Final Outcome:
 - ✅ Working application that solves the stated problem
 - ✅ Code is maintainable and well-documented
 - ✅ Application is ready for production use
 - ✅ Users find value in the solution
+- ✅ **High confidence in code changes due to comprehensive test coverage**
+- ✅ **Fast development iterations with automated testing feedback**
+- ✅ **Low defect rate in production due to thorough testing**
+- ✅ **Easy refactoring and maintenance with test safety net**
 
 ---
 

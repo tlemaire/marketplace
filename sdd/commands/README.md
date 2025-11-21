@@ -22,6 +22,14 @@ Quality assurance and analysis commands that ensure project success and consiste
 - **[checklist.md](quality/checklist.md)** - `/sdd.checklist` - Generate quality checklists for validation
 - **[analyze.md](quality/analyze.md)** - `/sdd.analyze` - Analyze consistency between artifacts
 
+### 🆕 TDD Commands (`tdd/`)
+Test-Driven Development commands that integrate comprehensive testing into the SDD workflow.
+
+- **[specify.md](tdd/specify.md)** - `/sdd.tdd.specify` - Create test specifications from project requirements
+- **[design.md](tdd/design.md)** - `/sdd.tdd.design` - Design test architecture and testing strategy
+- **[implement.md](tdd/implement.md)** - `/sdd.tdd.implement` - Execute TDD implementation workflow (Red-Green-Refactor)
+- **[coverage.md](tdd/coverage.md)** - `/sdd.tdd.coverage` - Analyze test coverage and generate comprehensive reports
+
 ## Command Structure
 
 Each command follows the Claude Code plugin format with YAML frontmatter:
@@ -52,10 +60,13 @@ sdd/
 ├── specs/                              # Complete specifications
 │   ├── 001-sdd-plugin/                 # Plugin specification
 │   └── 002-sdd-commands/               # Commands specification
+├── templates/                          # Project templates
+│   └── testing-checklist.md            # Testing quality checklist
 └── commands/                           # Command implementations
     ├── README.md                       # This file
     ├── core/                           # Core workflow commands
-    └── quality/                        # Quality assurance commands
+    ├── quality/                        # Quality assurance commands
+    └── tdd/                            # 🆕 Test-Driven Development commands
 ```
 
 ## Development Workflow
@@ -100,7 +111,7 @@ For complete documentation on the SDD commands system:
 
 ## Usage Examples
 
-### Complete SDD Workflow
+### Complete SDD + TDD Workflow
 ```bash
 # 1. Validate project structure (new projects start here)
 /sdd.validate
@@ -109,34 +120,52 @@ For complete documentation on the SDD commands system:
 /sdd.help
 
 # 3. Establish project principles
-/sdd.constitution "Simple, fast, reliable"
+/sdd.constitution "Simple, fast, reliable, well-tested"
 
 # 4. Create specification (automatically creates SDD structure)
 /sdd.specify "Add user authentication system"
 
-# 5. Validate SDD compliance
+# 5. Create test specifications from requirements (NEW)
+/sdd.tdd.specify "unit,integration,e2e,security"
+
+# 6. Validate SDD compliance
 /sdd.validate
 
-# 6. Resolve ambiguities
+# 7. Resolve ambiguities
 /sdd.clarify
 
-# 7. Generate technical plan
+# 8. Generate technical plan
 /sdd.plan "React, TypeScript, Node.js"
 
-# 8. Create task list
+# 9. Design test architecture (NEW)
+/sdd.tdd.design "jest,playwright" pyramid
+
+# 10. Create task list (TDD-enhanced)
 /sdd.tasks
 
-# 9. Generate quality checklists
-/sdd.checklist "requirements, ux, security"
+# 11. Generate quality checklists (Enhanced with testing)
+/sdd.checklist "requirements, ux, testing, security"
 
-# 10. Analyze consistency
+# 12. Implement with TDD methodology (NEW)
+/sdd.tdd.implement all user-authentication
+
+# 13. Monitor coverage and quality (NEW)
+/sdd.tdd.coverage --format html --threshold 85
+
+# 14. Analyze consistency
 /sdd.analyze
 
-# 11. Final validation before implementation
+# 15. Final validation before implementation
 /sdd.validate
+```
 
-# 12. Execute implementation
-/sdd.implement
+### TDD-Focused Workflow
+```bash
+# Quick TDD setup for existing project
+/sdd.tdd.specify "unit,integration"
+/sdd.tdd.design
+/sdd.tdd.implement all
+/sdd.tdd.coverage --watch
 ```
 
 ### Quality Assurance Workflow
@@ -147,8 +176,11 @@ For complete documentation on the SDD commands system:
 # Analyze artifact consistency
 /sdd.analyze
 
-# Generate comprehensive quality validation
-/sdd.checklist "requirements, ux, performance, accessibility, security"
+# Generate comprehensive quality validation (Enhanced with testing)
+/sdd.checklist "requirements, ux, testing, performance, accessibility, security"
+
+# Comprehensive testing quality validation (NEW)
+/sdd.tdd.checklist "unit,integration,e2e,coverage,security"
 ```
 
 This organized structure ensures that the SDD commands themselves follow the same methodology they promote, providing a consistent and scalable foundation for the complete Spec-Driven Development workflow.

@@ -1,14 +1,37 @@
-# Portfolio Website Sample - Intermediate Level
+# Portfolio Website Sample - Intermediate Level (SDD + TDD)
 
-This intermediate SDD example demonstrates building a professional portfolio website with modern web technologies, SEO optimization, and performance best practices. Perfect for freelancers, developers, and creative professionals.
+This intermediate SDD + TDD example demonstrates building a professional portfolio website with modern web technologies, SEO optimization, comprehensive testing, and performance best practices. Perfect for freelancers, developers, and creative professionals who value quality assurance.
 
-## SDD Commands Used
+## Enhanced SDD + TDD Commands Used
 ```bash
-/sdd.constitution "Professional presentation, SEO optimized, mobile-first"
+/sdd.constitution "Professional presentation, SEO optimized, mobile-first, quality assured"
 /sdd.specify "Build a portfolio showcasing my skills and projects"
+/sdd.tdd.specify "unit,integration"                      # 🆕 Create comprehensive test specs
 /sdd.plan "Modern web technologies, static hosting, performance optimized"
+/sdd.tdd.design "jest,playwright" pyramid                # 🆕 Design full test architecture
 /sdd.tasks
+/sdd.tdd.implement all portfolio                         # 🆕 Implement with TDD workflow
+/sdd.tdd.coverage --format html --threshold 80          # 🆕 Generate coverage reports
 ```
+
+## 🧪 Professional Testing Integration
+
+### Test Specifications
+- **Unit Testing**: Jekyll build process, template rendering, and asset optimization
+- **Integration Testing**: Complete site generation, SEO validation, and performance testing
+- **E2E Testing**: User journeys across portfolio sections and contact forms
+- **Quality Gates**: 80%+ coverage with automated testing pipeline
+
+### Testing Workflow
+1. **Template Testing**: Test Jekyll template rendering and data binding
+2. **Build Testing**: Validate site compilation and asset optimization
+3. **Content Testing**: Verify SEO metadata and accessibility compliance
+4. **Performance Testing**: Monitor load times and Core Web Vitals
+
+### Generated TDD Files (NEW)
+- **[tdd-spec.md](specs/001-portfolio-website/tdd-spec.md)** - Comprehensive test specifications
+- **[tdd-architecture.md](specs/001-portfolio-website/tdd-architecture.md)** - Jest + Playwright architecture
+- **[checklists/testing.md](specs/001-portfolio-website/checklists/testing.md)** - Professional testing checklist
 
 ## SDD-Generated Files
 This sample demonstrates the complete SDD methodology with the following generated files:

@@ -1,10 +1,19 @@
-# Spec-Driven Development (SDD) Plugin
+# 🚀 Spec-Driven Development (SDD) Plugin
 
-> Transform ideas into structured specifications and executable code through systematic workflow
+> **Transform ideas into production-ready code through systematic workflow**
 
-## Overview
+## 🎯 **New to SDD? Start Here:**
 
-The Spec-Driven Development (SDD) plugin for Claude Code implements a comprehensive methodology that transforms your ideas into structured specifications and executable code through a systematic workflow. SDD follows specification-first development principles optimized for Claude Code's unique capabilities.
+- **[📖 Quick Start Guide](QUICKSTART.md)** - Get started in 5 minutes
+- **[🎬 Interactive Start](START.md)** - Choose your project type
+- **[📋 Commands Cheat Sheet](COMMANDS.md)** - All commands in one place
+- **[🆘 Help Center](HELP.md)** - Everything you need to know
+
+## 📚 **Experienced Users?**
+
+- **[Complete Documentation](README.md#complete-documentation)** - Full details below
+- **[Sample Projects](samples/)** - Real examples by complexity
+- **[Templates & Patterns](templates/)** - Ready-to-use templates
 
 ## Quick Start
 
@@ -20,7 +29,7 @@ claude plugin install sdd@marketplace
 /sdd.help
 ```
 
-### Your First Project
+### Your First Project (with TDD)
 ```bash
 # 1. Set project principles
 /sdd.constitution "Simple, no dependencies, fast loading"
@@ -28,14 +37,23 @@ claude plugin install sdd@marketplace
 # 2. Create specification
 /sdd.specify "Create a simple landing page with contact form"
 
-# 3. Plan implementation
+# 3. Create test specifications (NEW - TDD Integration)
+/sdd.tdd.specify "unit,integration,e2e"
+
+# 4. Design test architecture (NEW - TDD Integration)
+/sdd.tdd.design
+
+# 5. Plan implementation
 /sdd.plan "HTML5, CSS3, vanilla JavaScript"
 
-# 4. Generate tasks
+# 6. Generate tasks
 /sdd.tasks
 
-# 5. Create quality checklists
-/sdd.checklist "requirements, ux, performance"
+# 7. Create quality checklists (Enhanced with TDD)
+/sdd.checklist "requirements, ux, testing, performance"
+
+# 8. Implement with TDD (NEW - Test-First Development)
+/sdd.tdd.implement all
 ```
 
 ## SDD-Compliant Structure
@@ -48,11 +66,23 @@ sdd/
 ├── .specify/                           # 🧠 Enhanced Memory System
 │   └── memory/
 │       └── constitution.md             # Project principles (authoritative)
+├── commands/                           # ⚡ Command implementations
+│   ├── core/                           # Core SDD commands
+│   ├── quality/                        # Quality assurance commands
+│   └── tdd/                            # 🆕 TDD commands (NEW)
+│       ├── specify.md                  # Test specification generator
+│       ├── design.md                   # Test architecture designer
+│       ├── implement.md                # TDD implementation workflow
+│       └── coverage.md                 # Coverage analysis and reporting
+├── templates/                          # 📝 Project templates
+│   └── testing-checklist.md            # 🆕 Testing quality checklist
 └── specs/                              # 📋 Complete specifications
     └── 001-sdd-plugin/                 # Plugin specification
         ├── spec.md                     # Functional specification
         ├── plan.md                     # Technical implementation plan
         ├── tasks.md                    # Implementation tasks
+        ├── tdd-spec.md                 # 🆕 Test specifications
+        ├── tdd-architecture.md         # 🆕 Test architecture design
         ├── research.md                 # Technical research
         ├── data-model.md               # Data structures
         ├── quickstart.md               # Development setup guide
@@ -61,6 +91,7 @@ sdd/
         └── checklists/                 # Quality assurance
             ├── requirements.md         # Requirements validation
             ├── ux.md                   # User experience testing
+            ├── testing.md              # 🆕 Testing quality gates
             ├── performance.md          # Performance benchmarks
             ├── accessibility.md        # Accessibility compliance
             └── security.md             # Security validation
@@ -74,6 +105,7 @@ sdd/
 /sdd.specify "description"    # Create specification from description
 /sdd.plan "tech stack"        # Generate technical implementation plan
 /sdd.tasks                   # Generate dependency-organized tasks
+/sdd.implement               # Execute implementation workflow
 ```
 
 ### Quality Commands
@@ -81,6 +113,14 @@ sdd/
 /sdd.clarify                 # Resolve specification ambiguities
 /sdd.checklist "type"        # Generate quality checklists
 /sdd.analyze                 # Analyze consistency between artifacts
+```
+
+### 🆕 TDD Commands (NEW)
+```bash
+/sdd.tdd.specify [focus]     # Create test specifications from requirements
+/sdd.tdd.design [framework]  # Design test architecture and strategy
+/sdd.tdd.implement [phase]   # Execute TDD implementation workflow
+/sdd.tdd.coverage [format]   # Analyze test coverage and generate reports
 ```
 
 ### Help Command
@@ -93,21 +133,27 @@ sdd/
 
 ### For Individual Developers
 - **Clarity**: Eliminate scope creep and ambiguous requirements
+- **🛡️ Reliability**: Test-first development prevents bugs and regressions
 - **Speed**: Automated task generation and environment setup
-- **Quality**: Built-in quality gates and best practices
+- **Quality**: Built-in quality gates and comprehensive testing
+- **Confidence**: Automated tests provide continuous validation
 - **Consistency**: Standardized approach across all projects
 
 ### For Teams
 - **Collaboration**: Shared understanding through clear specifications
-- **Traceability**: Track features from idea to implementation
-- **Onboarding**: Easy for new members to understand project structure
-- **Visibility**: Clear progress tracking and documentation
+- **🧪 Collective Quality**: Comprehensive test suite ensures team-wide code quality
+- **Traceability**: Track features from idea to implementation (with test coverage)
+- **Onboarding**: Easy for new members to understand project structure and tests
+- **🤝 Safe Refactoring**: Tests enable confident code changes by multiple developers
+- **Visibility**: Clear progress tracking and documentation with test metrics
 
 ### For Enterprise
 - **Governance**: Consistent methodology across projects
-- **Quality Assurance**: Built-in checklists and validation
+- **🔒 Risk Mitigation**: Comprehensive testing prevents production issues
+- **Quality Assurance**: Built-in checklists and validation with test coverage
 - **Scalability**: Methodology scales from simple to complex projects
-- **Efficiency**: Reduced rework and miscommunication
+- **📊 Compliance**: Automated testing and coverage reports for audit requirements
+- **Efficiency**: Reduced rework and miscommunication through test-driven development
 
 ## Sample Projects
 
@@ -156,19 +202,32 @@ make docs                     # Generate documentation
 ### Core Principles
 
 1. **Specification First**: Every project starts with clear requirements
-2. **Quality Gates**: Built-in validation ensures project success
-3. **Continuous Documentation**: Specifications evolve with the project
-4. **Team Collaboration**: Shared understanding through structured documents
+2. **Test-Driven Development**: Write tests before code implementation
+3. **Quality Gates**: Built-in validation ensures project success
+4. **Continuous Documentation**: Specifications evolve with the project
+5. **Team Collaboration**: Shared understanding through structured documents
 
-### Workflow
+### Enhanced SDD + TDD Workflow
 
 1. **Constitution**: Establish project principles and quality standards
 2. **Specification**: Transform ideas into structured requirements
-3. **Planning**: Design technical implementation approach
-4. **Tasks**: Break down into manageable, dependency-organized tasks
-5. **Checklists**: Create quality assurance frameworks
-6. **Implementation**: Execute with clear guidance and validation
-7. **Analysis**: Verify consistency and quality across artifacts
+3. **🆕 Test Specification**: Create comprehensive test requirements from specifications
+4. **Planning**: Design technical implementation approach
+5. **🆕 Test Architecture**: Design test framework and strategy
+6. **Tasks**: Break down into manageable, dependency-organized tasks
+7. **🆕 TDD Implementation**: Write tests first, then implementation (Red-Green-Refactor)
+8. **🆕 Coverage Analysis**: Monitor and improve test coverage
+9. **Checklists**: Create quality assurance frameworks (Enhanced with testing)
+10. **Implementation**: Execute with clear guidance and validation
+11. **Analysis**: Verify consistency and quality across artifacts
+
+### TDD Integration Benefits
+
+- **🛡️ Risk Reduction**: Tests prevent implementation defects and requirements drift
+- **⚡ Faster Development**: Catch issues early with rapid test feedback
+- **🎯 Higher Quality**: Comprehensive test coverage ensures robust implementations
+- **📈 Maintainable Code**: Tests serve as living documentation and enable safe refactoring
+- **🔄 Continuous Confidence**: Automated tests validate system behavior continuously
 
 ## Contributing
 
@@ -194,3 +253,51 @@ MIT License - see [LICENSE](specs/001-sdd-plugin/license.md) for details.
 **Transform your ideas into successful projects with Spec-Driven Development!**
 
 Start with `/sdd.help` to explore all available commands and features.
+
+## 🧪 Complete TDD Workflow Example
+
+Here's a complete example of using SDD with integrated TDD for a user authentication feature:
+
+```bash
+# 1. Set project principles
+/sdd.constitution "Secure, fast, scalable, well-tested"
+
+# 2. Create specification for authentication system
+/sdd.specify "User authentication with email/password, social login, and session management"
+
+# 3. Create comprehensive test specifications
+/sdd.tdd.specify "unit,integration,e2e,security"
+
+# 4. Design technical architecture
+/sdd.plan "Node.js, Express, JWT, bcrypt, PostgreSQL, React"
+
+# 5. Design test architecture and strategy
+/sdd.tdd.design "jest,supertest,playwright" pyramid
+
+# 6. Generate implementation tasks (TDD-enhanced)
+/sdd.tasks
+
+# 7. Create testing quality checklist
+/sdd.tdd.checklist "unit,integration,security,coverage"
+
+# 8. Implement with TDD methodology
+/sdd.tdd.implement unit user-validation
+/sdd.tdd.implement unit authentication-service
+/sdd.tdd.implement integration api-endpoints
+/sdd.tdd.implement e2e login-workflow
+
+# 9. Monitor and improve coverage
+/sdd.tdd.coverage --format html --threshold 85
+
+# 10. Validate complete implementation
+/sdd.validate
+/sdd.analyze
+/sdd.checklist "requirements,ux,testing,security,performance"
+```
+
+**Result**: A fully tested, production-ready authentication system with:
+- ✅ 90%+ test coverage
+- ✅ Comprehensive security testing
+- ✅ User journey validation
+- ✅ Performance benchmarking
+- ✅ Complete documentation

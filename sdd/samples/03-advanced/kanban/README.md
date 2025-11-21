@@ -1,14 +1,41 @@
-# Kanban Board Sample - Advanced Level
+# Kanban Board Sample - Advanced Level (SDD + TDD)
 
-This advanced SDD example demonstrates building a comprehensive collaborative kanban system with real-time features, team management, and enterprise-grade architecture.
+This advanced SDD + TDD example demonstrates building a comprehensive collaborative kanban system with real-time features, team management, enterprise-grade architecture, and comprehensive testing strategies for mission-critical applications.
 
-## SDD Commands Used
+## Enhanced SDD + TDD Commands Used
 ```bash
-/sdd.constitution "Real-time collaboration, enterprise security, scalability"
+/sdd.constitution "Real-time collaboration, enterprise security, scalability, comprehensive testing"
 /sdd.specify "Collaborative Kanban system with real-time features"
+/sdd.tdd.specify "unit,integration,e2e,security"         # 🆕 Complete test specifications
 /sdd.plan "React, TypeScript, Node.js, PostgreSQL, Socket.IO, Docker"
+/sdd.tdd.design "jest,supertest,playwright" pyramid      # 🆕 Enterprise test architecture
 /sdd.tasks
+/sdd.tdd.implement all kanban-system                     # 🆕 Full TDD implementation
+/sdd.tdd.coverage --format lcov --threshold 85           # 🆕 Enterprise coverage monitoring
 ```
+
+## 🚀 Enterprise Testing Integration
+
+### Comprehensive Test Suite
+- **Unit Testing**: React components, TypeScript services, and utility functions
+- **Integration Testing**: API endpoints, database operations, and Socket.IO events
+- **E2E Testing**: Complete user workflows, real-time collaboration, and cross-browser testing
+- **Security Testing**: Authentication, authorization, and data protection validation
+- **Performance Testing**: Load testing, stress testing, and real-time connection handling
+- **Quality Gates**: 85%+ coverage with CI/CD integration and automated quality reporting
+
+### Enterprise Testing Workflow
+1. **Component Testing**: React component behavior and TypeScript type validation
+2. **Service Testing**: Business logic and database interaction validation
+3. **API Testing: REST endpoints, GraphQL queries, and real-time event handling
+4. **Integration Testing**: Multi-service interactions and data consistency
+5. **Security Testing**: Penetration testing, vulnerability scanning, and compliance validation
+6. **Performance Testing**: Load testing, stress testing, and scalability validation
+
+### Generated TDD Files (NEW)
+- **[tdd-spec.md](specs/001-kanban-board/tdd-spec.md)** - Enterprise test specifications
+- **[tdd-architecture.md](specs/001-kanban-board/tdd-architecture.md)** - Full-stack test architecture
+- **[checklists/testing.md](specs/001-kanban-board/checklists/testing.md)** - Enterprise testing checklist
 
 ## SDD-Generated Files
 This sample demonstrates the complete SDD methodology with the following generated files:

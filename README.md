@@ -4,28 +4,47 @@ Claude Code plugins, tools, and projects by Thierry Lemaire - enhancing your dev
 
 ## ✨ Available Plugins & Projects
 
-### 🧠 SDD - Spec-Driven Development
+### 🧠 SDD - Spec-Driven Development + TDD
 
-Transform ideas into structured specifications and executable code through a systematic workflow.
+Transform ideas into structured specifications and executable code through systematic **Spec-Driven Development + Test-Driven Development** workflow.
 
 **🔥 Key Features:**
-- 9 workflow commands for systematic development
+- 13 workflow commands (9 core + 4 🆕 TDD commands)
+- Complete TDD integration with test-first development
 - GitHub Spec Kit compliance with 100% workflow alignment
-- Enhanced memory architecture (Project → Feature → Quality)
-- Automatic quality assurance checklists and consistency analysis
-- Progressive learning path with 4 complexity levels
+- Enhanced memory architecture (Project → Feature → Quality → Testing)
+- Automatic quality assurance checklists with comprehensive testing validation
+- Progressive learning path with 5 complexity levels (beginner to enterprise)
+- Red-Green-Refactor workflow with coverage monitoring and quality gates
 
-**⚡ Quick Start**:
+**🆕 TDD Commands:**
+- `/sdd.tdd.specify` - Create test specifications from requirements
+- `/sdd.tdd.design` - Design test architecture and strategy
+- `/sdd.tdd.implement` - Execute TDD implementation workflow
+- `/sdd.tdd.coverage` - Analyze test coverage and generate reports
+
+**⚡ Enhanced Quick Start (with TDD)**:
 ```bash
 claude plugin marketplace add https://github.com/tlemaire/marketplace
 claude plugin install sdd@marketplace
-/sdd.help
+
+# Complete SDD + TDD workflow
+/sdd.constitution "Secure, fast, scalable, well-tested"
+/sdd.specify "Create user authentication system"
+/sdd.tdd.specify "unit,integration,e2e,security"      # 🆕 Test specifications
+/sdd.plan "React, TypeScript, Node.js, PostgreSQL"
+/sdd.tdd.design "jest,playwright" pyramid            # 🆕 Test architecture
+/sdd.tasks
+/sdd.tdd.implement all user-authentication           # 🆕 Test-first implementation
+/sdd.tdd.coverage --format html --threshold 85       # 🆕 Coverage monitoring
+/sdd.validate
 ```
 
 **📚 Documentation**:
-- See [sdd/README.md](sdd/README.md) for complete details and usage examples
+- See [sdd/README.md](sdd/README.md) for complete SDD + TDD details and workflow examples
 - View [sdd/specs/001-sdd-plugin/compliance.md](sdd/specs/001-sdd-plugin/compliance.md) for comprehensive GitHub Spec Kit compliance analysis (100% ✅)
-- Explore [sdd/samples/](sdd/samples/) directory for example projects by complexity level
+- Explore [sdd/samples/](sdd/samples/) directory for **TDD-enhanced** example projects by complexity level
+- Check [sdd/templates/testing-checklist.md](sdd/templates/testing-checklist.md) for comprehensive testing quality gates
 
 ### 🤖 SmartCommit
 
@@ -113,7 +132,37 @@ claude plugin marketplace list
 
 ## 🎯 Usage Examples
 
-### Spec-Driven Development Workflow
+### Complete SDD + TDD Workflow (NEW)
+```bash
+# 1. Define project principles (with testing focus)
+/sdd.constitution "KISS principles, React, TypeScript, test-first development"
+
+# 2. Create specification
+/sdd.specify "Add user authentication system"
+
+# 3. Create test specifications (NEW)
+/sdd.tdd.specify "unit,integration,e2e,security"
+
+# 4. Generate technical plan
+/sdd.plan "React, TypeScript, Node.js, PostgreSQL"
+
+# 5. Design test architecture (NEW)
+/sdd.tdd.design "jest,playwright" pyramid
+
+# 6. Create task list (TDD-enhanced)
+/sdd.tasks
+
+# 7. Implement with test-first development (NEW)
+/sdd.tdd.implement all user-authentication
+
+# 8. Monitor coverage and quality (NEW)
+/sdd.tdd.coverage --format html --threshold 85
+
+# 9. Final validation
+/sdd.validate
+```
+
+### Basic SDD Workflow
 ```bash
 # 1. Define project principles
 /sdd.constitution "KISS principles, React, TypeScript"
@@ -149,10 +198,14 @@ git add .
 marketplace/
 ├── 📋 CHANGELOG.md           # Unified changelog for all plugins
 ├── 📦 .claude-plugin/        # Marketplace configuration
-├── 🧠 sdd/                   # Spec-Driven Development plugin
-│   ├── 📝 commands/          # 9 SDD workflow commands
-│   ├── 📚 samples/           # Example projects by complexity
-│   └── 📖 README.md          # SDD documentation
+├── 🧠 sdd/                   # Spec-Driven Development + TDD plugin
+│   ├── 📝 commands/          # 13 workflow commands (9 core + 4 TDD)
+│   │   ├── core/             # Core SDD workflow commands
+│   │   ├── quality/          # Quality assurance commands
+│   │   └── tdd/              # 🆕 Test-Driven Development commands
+│   ├── 📚 samples/           # 🆕 TDD-enhanced example projects by complexity
+│   ├── 📝 templates/         # 🆕 Project templates and checklists
+│   └── 📖 README.md          # Complete SDD + TDD documentation
 ├── 🤖 smartcommit/           # SmartCommit plugin
 │   ├── 💬 commands/          # Commit generation commands
 │   ├── 📚 samples/           # Usage examples and configurations
@@ -193,11 +246,18 @@ All plugins in this marketplace are licensed under **MIT License**.
 ## 🔗 Links
 
 - **📋 Changelog**: [CHANGELOG.md](CHANGELOG.md) - Version history and release notes
-- **🧠 SDD Plugin**: [sdd/README.md](sdd/README.md) - Complete SDD documentation
+- **🧠 SDD + TDD Plugin**: [sdd/README.md](sdd/README.md) - Complete SDD + TDD documentation
+- **🧪 TDD Commands**: [sdd/commands/tdd/](sdd/commands/tdd/) - Test-Driven Development command documentation
+- **📚 TDD-Enhanced Samples**: [sdd/samples/](sdd/samples/) - Example projects with comprehensive testing
+- **🎯 Testing Checklist**: [sdd/templates/testing-checklist.md](sdd/templates/testing-checklist.md) - Comprehensive testing quality gates
 - **📊 Spec Kit Compliance**: [sdd/specs/001-sdd-plugin/compliance.md](sdd/specs/001-sdd-plugin/compliance.md) - GitHub Spec Kit compliance analysis (100% ✅)
 - **🤖 SmartCommit Plugin**: [smartcommit/README.md](smartcommit/README.md) - Complete SmartCommit documentation
 - **🌐 Claude Proxy**: [claude-proxy/README.md](claude-proxy/README.md) - Multi-provider AI integration documentation
 - **⭐ GitHub**: [tlemaire/marketplace](https://github.com/tlemaire/marketplace) - Source repository
+
+---
+
+**🚀 Ready to build better software with comprehensive testing? Install the enhanced SDD + TDD plugin and start writing test-first, specification-driven code today!**
 
 ---
 

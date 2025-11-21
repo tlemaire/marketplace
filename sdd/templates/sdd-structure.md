@@ -1,24 +1,54 @@
-# SDD-Compliant Project Structure Template
+# SDD + TDD-Compliant Project Structure Template
 
-This template defines the complete SDD-compliant structure that all projects created with SDD should follow.
+This template defines the complete **SDD + TDD-compliant** structure that all projects created with enhanced SDD should follow, integrating both specification-driven and test-driven development methodologies.
 
 ## Required Directory Structure
 
 ```
 project-name/
-├── README.md                           # 📖 Project overview with SDD structure explanation
-├── .gitignore                          # 🚫 Git ignore patterns for SDD files
+├── README.md                           # 📖 Project overview with SDD + TDD structure explanation
+├── .gitignore                          # 🚫 Git ignore patterns for SDD and test files
 ├── .specify/                           # 🧠 SDD-Enhanced Memory System
 │   └── memory/
 │       └── constitution.md             # Project principles and quality standards (authoritative)
-└── specs/                              # 📋 Complete SDD-generated specifications
+├── tests/                              # 🧪 Test-Driven Development structure (NEW)
+│   ├── unit/                           # Unit tests for individual components
+│   │   ├── components/                 # Component unit tests
+│   │   ├── services/                   # Service unit tests
+│   │   ├── utils/                      # Utility function tests
+│   │   └── __mocks__/                  # Mock files for unit testing
+│   ├── integration/                    # Integration tests for component interactions
+│   │   ├── api/                        # API integration tests
+│   │   ├── database/                   # Database integration tests
+│   │   └── external-services/          # External service integration tests
+│   ├── e2e/                            # End-to-end tests for complete user workflows
+│   │   ├── journeys/                   # User journey tests
+│   │   ├── pages/                      # Page-level e2e tests
+│   │   └── fixtures/                   # Test data and setup
+│   ├── performance/                    # Performance and load tests
+│   │   ├── load/                       # Load testing scripts
+│   │   └── stress/                     # Stress testing scenarios
+│   ├── utils/                          # Test utilities and helpers
+│   │   ├── helpers/                    # Test helper functions
+│   │   ├── fixtures/                   # Test data fixtures
+│   │   └── setup/                      # Test setup and teardown
+│   ├── coverage/                       # 📊 Coverage reports and analysis
+│   └── config/                         # 🛠️ Test configuration files
+│       ├── jest.config.js              # Jest configuration
+│       ├── playwright.config.js        # Playwright configuration
+│       └── test-setup.js               # Global test setup
+└── specs/                              # 📋 Complete SDD + TDD-generated specifications
     ├── 001-project-setup/              # Project initialization specification
     │   ├── spec.md                     # Project setup and configuration
+    │   ├── plan.md                     # Technical architecture plan
+    │   ├── tdd-spec.md                  # 🆕 Project-level test specifications
+    │   ├── tdd-architecture.md         # 🆕 Test architecture design
     │   ├── .env.example                # Project environment variables template
     │   ├── Makefile                    # Project development automation
     │   ├── quickstart.md               # Project setup guide
     │   └── checklists/                 # Project quality checklists
     │       ├── requirements.md         # Requirements validation
+    │       ├── testing.md              # 🆕 Testing quality gates
     │       ├── ux.md                   # User experience testing
     │       ├── performance.md          # Performance benchmarks
     │       ├── accessibility.md        # Accessibility compliance
@@ -27,6 +57,8 @@ project-name/
         ├── spec.md                     # Functional specification
         ├── plan.md                     # Technical implementation plan
         ├── tasks.md                    # Implementation tasks
+        ├── tdd-spec.md                  # 🆕 Feature-level test specifications
+        ├── tdd-architecture.md         # 🆕 Feature test architecture
         ├── research.md                 # Technical research
         ├── data-model.md               # Data structures
         ├── quickstart.md               # Feature development setup
@@ -34,6 +66,7 @@ project-name/
         ├── Makefile                    # Feature-specific automation
         └── checklists/                 # Feature quality checklists
             ├── requirements.md         # Feature requirements validation
+            ├── testing.md              # 🆕 Feature testing quality gates
             ├── ux.md                   # Feature user experience testing
             ├── performance.md          # Feature performance benchmarks
             ├── accessibility.md        # Feature accessibility compliance
