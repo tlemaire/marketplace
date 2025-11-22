@@ -1,6 +1,19 @@
 # 🎬 SDD Entry Point
 
-> **This is the best place to start your SDD journey**
+> **This is the best place to start your SDD journey with enterprise-grade quality**
+
+## 🔒 **NEW: Quality-First Development**
+
+### ⚡ **I want fast development with automatic quality**
+[→ Quick Quality Setup](#quick-quality-setup)
+
+### 🏢 **I need enterprise-grade standards**
+[→ Enterprise Quality](#enterprise-quality)
+
+### 🌐 **I want to work offline with cached documentation**
+[→ Offline Development](#offline-development)
+
+---
 
 ## 🤔 **What Kind of Project Are You Building?**
 
@@ -137,8 +150,99 @@ Claude will guide you through the process step by step!
 
 ---
 
+## ⚡ **Quick Quality Setup**
+
+**Perfect for**: Developers who want automatic quality without configuration overhead
+
+**Setup**:
+```bash
+# 1. Setup automatic quality (2 minutes)
+/sdd.setup-hooks --hooks pre-commit --validate-level normal
+
+# 2. Start your project
+/sdd.specify "your project idea"
+
+# 3. Develop normally - quality is automatic
+git add .
+git commit -m "feat: implement feature"
+# → Automatic validation, fixes, and documentation updates
+```
+
+**Benefits**:
+- ✅ Auto-fix code formatting and common issues
+- 📚 Automatic documentation synchronization
+- 🧪 Test validation when tests exist
+- 🔍 Code quality checks
+- 🚀 No manual quality steps needed
+
+---
+
+## 🏢 **Enterprise Quality**
+
+**Perfect for**: Business applications requiring security, compliance, and team standards
+
+**Setup**:
+```bash
+# 1. Setup strict quality standards
+/sdd.setup-hooks --hooks pre-commit,pre-push --validate-level strict
+
+# 2. Define enterprise requirements
+/sdd.constitution "security, performance, compliance, documentation"
+
+# 3. Comprehensive specification
+/sdd.specify "detailed business requirements with security considerations"
+
+# 4. Include comprehensive testing
+/sdd.tdd.specify "unit,integration,e2e,security,performance"
+
+# 5. Plan with enterprise stack
+/sdd.plan "React, TypeScript, Node.js, PostgreSQL, Redis"
+
+# 6. Implement with continuous validation
+/sdd.implement
+```
+
+**Benefits**:
+- 🔒 90% test coverage requirement
+- 🛡️ Security vulnerability scanning
+- 📊 Performance benchmarking
+- 📋 Compliance documentation
+- 👥 Team standards enforcement
+
+---
+
+## 🌐 **Offline Development**
+
+**Perfect for**: Developers who need to work without internet or want reliable documentation access
+
+**Setup**:
+```bash
+# 1. Cache popular libraries (when online)
+/mcp.cache update --scope popular
+
+# 2. Enable automatic caching
+/mcp.cache auto --enable true
+
+# 3. Research libraries when needed
+/mcp.resolve React
+/mcp.docs "/vercel/next.js" --topic authentication
+
+# 4. Work offline with cached documentation
+/sdd.specify "React app with authentication"
+# → Uses cached documentation
+```
+
+**Benefits**:
+- 📚 Offline documentation access
+- 🔄 Automatic library caching
+- ⚡ Instant documentation retrieval
+- 🎯 Research without internet dependency
+- 💾 Cached docs for team sharing
+
+---
+
 ## 🚀 **Ready?**
 
-**Choose your path above or start with**: `/sdd.specify "your project idea"`
+**Choose your path above or start with**: `/sdd.setup-hooks --hooks pre-commit` then `/sdd.specify "your project idea"`
 
-*Remember: SDD is designed to help you at every step. You can't mess it up!* ✨
+*Remember: SDD with automatic quality means you can focus on building features while the system handles quality assurance!* ✨

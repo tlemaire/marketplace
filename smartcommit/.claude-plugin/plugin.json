@@ -8,6 +8,5 @@
     "name": "Thierry Lemaire",
     "email": "thierry.lemaire@gmail.com"
   },
-  "commands": "./commands",
-  "samples": "./samples"
+  "commands": "./commands"
 }

@@ -20,6 +20,9 @@
 | `/sdd.plan "tech stack"` | Choose technologies | Custom development |
 | `/sdd.tasks` | Get step-by-step tasks | Complex projects |
 | `/sdd.checklist "quality"` | Quality validation | Before deployment |
+| `/sdd.code-validate` | Code validation & fixes | Every code change |
+| `/sdd.docs-sync` | Documentation sync | Auto-update docs |
+| `/sdd.setup-hooks` | Git hooks automation | Enforce standards |
 
 ---
 
@@ -31,6 +34,19 @@
 | `/sdd.tdd.design` | Setup test tools | Professional projects |
 | `/sdd.tdd.implement` | Code with tests | High-quality apps |
 | `/sdd.tdd.coverage` | Check test quality | Team projects |
+
+---
+
+## 🔌 **MCP Commands** (Enhanced capabilities with local MCP servers)
+
+| Command | What It Does | Use Case |
+|---------|--------------|----------|
+| `/mcp.resolve React` | Get library documentation IDs | Research libraries |
+| `/mcp.docs "/vercel/next.js"` | Fetch up-to-date documentation | Current API references |
+| `/mcp.browser test` | Automated browser testing | Web app validation |
+| `/mcp.diags --fix` | Code quality diagnostics | Error detection & fixes |
+| `/mcp.cache update` | Cache libraries for offline use | Offline documentation access |
+| `/mcp.help` | MCP commands help | MCP command reference |
 
 ---
 
@@ -71,6 +87,32 @@
 /sdd.implement
 ```
 
+### **Enhanced Project with MCP** (45 minutes):
+```bash
+/mcp.resolve React
+/mcp.docs "/vercel/next.js" --topic authentication
+/mcp.cache add React  # Cache for offline use
+/sdd.specify "React app with authentication"
+/sdd.plan "React, TypeScript, Tailwind"
+/sdd.tdd.specify "unit,integration"
+/sdd.implement
+/mcp.diags --fix
+/mcp.browser test --url http://localhost:3000
+```
+
+### **Quality-First Project** (60 minutes):
+```bash
+/sdd.setup-hooks --hooks pre-commit,pre-push --validate-level strict
+/sdd.constitution "security, performance, documentation"
+/sdd.specify "comprehensive requirements with validation"
+/sdd.plan "React, TypeScript, Jest, Cypress"
+/sdd.tdd.specify "unit,integration,e2e"
+/sdd.implement
+# Automatic validation via hooks
+/sdd.code-validate --scope all --strict
+/sdd.docs-sync --all --auto
+```
+
 ---
 
 ## 💡 **Smart Usage Tips**
@@ -79,6 +121,9 @@
 2. **❓ Ask for Help**: `/sdd.help` anytime you're stuck
 3. **🔄 Iterate**: You can refine specifications and re-run commands
 4. **📋 Follow the Order**: Commands work best in sequence (specify → plan → implement)
+5. **✅ Quality First**: Setup validation hooks early: `/sdd.setup-hooks --hooks pre-commit`
+6. **📚 Keep Docs Current**: Sync documentation automatically: `/sdd.docs-sync --auto`
+7. **🔍 Validate Everything**: Run code validation before commits: `/sdd.code-validate --scope staged`
 
 ---
 
@@ -89,5 +134,7 @@
 **Command not working?** Check: `/sdd.validate`
 
 **Want testing?** Try: `/sdd.tdd.specify "help"`
+
+**Need documentation?** Use: `/mcp.resolve React` → `/mcp.docs "/vercel/next.js"`
 
 **Ready to start?** Use: `/sdd.specify "your project idea"` 🚀

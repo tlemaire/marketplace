@@ -10,8 +10,9 @@ Transform feature description into detailed functional specification with user s
 ## What to do:
 
 1. **Parse feature description** from user input
-2. **Generate feature identifier** (XXX-name format based on sequence)
-3. **Ensure SDD-compliant project structure**:
+2. **Extract technology mentions** from feature description for potential caching
+3. **Generate feature identifier** (XXX-name format based on sequence)
+4. **Ensure SDD-compliant project structure**:
    - Verify `.specify/memory/` directory exists
    - Verify `specs/` directory structure exists
    - Create missing directories if needed

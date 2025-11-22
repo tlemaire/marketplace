@@ -13,6 +13,9 @@
 - All Commands: `/sdd.help "commands"`
 - Testing Commands: `/sdd.help "tdd"`
 - Quality Commands: `/sdd.help "quality"`
+- MCP Commands: `/mcp.help` (Documentation, Browser Testing, Diagnostics, Cache)
+- Validation: `/sdd.code-validate` (Code quality & documentation)
+- Git Hooks: `/sdd.setup-hooks` (Automated validation)
 
 ### **📚 Want Examples?**
 - Simple Examples: `/sdd.help "examples"`
@@ -40,6 +43,9 @@
 
 ### **"I'm building something important for work"**
 → Use: `/sdd.constitution "security, performance"` → `/sdd.specify "requirements"` → `/sdd.plan "tech stack"` → `/sdd.tasks` → `/sdd.checklist "all"` → `/sdd.implement`
+
+### **"I need enterprise-grade quality and documentation"**
+→ Use: `/sdd.setup-hooks --hooks pre-commit,pre-push --validate-level strict` → `/sdd.constitution "security, performance, documentation"` → `/sdd.specify "requirements"` → `/sdd.implement` → `/sdd.code-validate --scope all --strict` → `/sdd.docs-sync --all --auto`
 
 ---
 

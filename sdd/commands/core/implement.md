@@ -25,7 +25,12 @@ Execute implementation tasks in dependency order based on current specification,
    - If no analysis found, recommend `/sdd.analyze` first
    - If critical issues exist, recommend fixing before implementation
 
-4. **Initialize implementation workflow**:
+4. **Setup validation environment**:
+   - Check if code validation hooks are installed: `/sdd.setup-hooks --status`
+   - If not installed, recommend: `/sdd.setup-hooks --hooks pre-commit --docs-update`
+   - Verify validation configuration exists
+
+5. **Initialize implementation workflow**:
    ```markdown
    # Implementation Initialization
 
@@ -151,6 +156,12 @@ Execute implementation tasks in dependency order based on current specification,
 - Add code comments
 - Update deployment guides
 
+### Quality Assurance:
+- **Code validation**: Run `/sdd.code-validate --scope staged --fix --update-docs` after each task
+- **Documentation sync**: Run `/sdd.docs-sync --auto` for API changes
+- **Automated hooks**: Pre-commit hooks will validate automatically
+- **Test validation**: Ensure all tests pass before proceeding
+
 ## Interactive Mode:
 - **Task confirmation**: Ask before starting each task
 - **Issue resolution**: Interactive problem-solving
@@ -180,14 +191,40 @@ When all 25 tasks are complete:
 - **Test Coverage**: [Percentage]
 - **Implementation Time**: [Duration]
 
+## Final Validation
+Running comprehensive validation before deployment completion...
+
+1. **Code Quality Validation**:
+   ```bash
+   /sdd.code-validate --scope all --strict
+   ```
+
+2. **Documentation Synchronization**:
+   ```bash
+   /sdd.docs-sync --all --auto
+   ```
+
+3. **SDD Compliance Check**:
+   ```bash
+   /sdd.validate --report
+   ```
+
 ## Quality Gates Passed
 - [ ] All requirements implemented
-- [ ] Tests passing
-- [ ] Code review complete
-- [ ] Documentation updated
+- [ ] Tests passing (≥80% coverage)
+- [ ] Code quality validation passed
+- [ ] Documentation synchronized
+- [ ] SDD compliance confirmed
+- [ ] Security validation passed
 
-## Ready for Deployment
+## Deployment Ready
 The feature is complete and ready for deployment to staging/production.
+
+### Next Steps:
+1. **Commit final changes**: `git add . && git commit -m "feat: complete [feature name] implementation"`
+2. **Create pull request**: For team review and deployment approval
+3. **Deploy to staging**: For final integration testing
+4. **Production deployment**: After staging validation
 ```
 
 Focus on systematic, quality-focused implementation that maintains traceability from requirements through code while ensuring all quality gates are passed.

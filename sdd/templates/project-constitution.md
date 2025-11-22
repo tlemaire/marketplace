@@ -1,6 +1,6 @@
 # Project Constitution Template
 
-This template defines the project constitution that establishes principles, quality standards, and development guidelines for SDD + TDD projects. The constitution serves as the authoritative guide for all project decisions and ensures consistent quality throughout the development lifecycle.
+This template defines the project constitution that establishes principles, quality standards, and development guidelines for SDD projects with enterprise-grade quality assurance. The constitution serves as the authoritative guide for all project decisions and ensures consistent quality throughout the development lifecycle with automatic validation and documentation synchronization.
 
 ## Constitution Structure Template
 
@@ -27,6 +27,24 @@ This template defines the project constitution that establishes principles, qual
 - **Process**: Use `/sdd.specify` before any implementation
 - **Standard**: Specifications must be validated before development begins
 - **Quality**: Clear acceptance criteria with measurable outcomes
+
+### 2. Automated Quality Enforcement (NEW)
+- **Requirement**: All code changes undergo automatic validation
+- **Process**: Git hooks enforce quality standards on every commit
+- **Standard**: `/sdd.setup-hooks --hooks pre-commit,pre-push` configured
+- **Quality**: Zero manual quality steps required
+
+### 3. Continuous Documentation Synchronization (NEW)
+- **Requirement**: Documentation always reflects current code state
+- **Process**: Automatic documentation updates on every change
+- **Standard**: `/sdd.docs-sync --auto` enabled
+- **Quality**: No outdated documentation allowed
+
+### 4. Shift-Left Testing Integration (NEW)
+- **Requirement**: Tests defined before implementation
+- **Process**: `/sdd.tdd.specify` generates test requirements from specifications
+- **Standard**: Test coverage minimum 80% (90% for production)
+- **Quality**: Tests drive implementation decisions
 
 ### 2. Test-Driven Development (TDD)
 - **Requirement**: Write failing tests before implementation code

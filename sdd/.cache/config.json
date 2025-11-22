@@ -1,0 +1,51 @@
+{
+  "cache_version": "1.0.0",
+  "created": "2025-01-22T10:00:00Z",
+  "last_updated": "2025-01-22T10:00:00Z",
+  "settings": {
+    "max_size_mb": 100,
+    "retention_days": 60,
+    "auto_cache_enabled": true,
+    "auto_update_enabled": true,
+    "update_frequency": "weekly",
+    "compression_enabled": true,
+    "popular_libraries": [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "Next.js",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "MongoDB",
+      "Vue.js",
+      "Angular",
+      "Jest",
+      "Cypress",
+      "Docker",
+      "Redis"
+    ],
+    "essential_libraries": [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "Next.js"
+    ]
+  },
+  "statistics": {
+    "total_libraries_cached": 0,
+    "cache_size_bytes": 0,
+    "cache_hits": 0,
+    "cache_misses": 0,
+    "last_cache_hit": null,
+    "most_accessed_library": null
+  },
+  "directory_structure": {
+    "cache_root": ".cache/libraries",
+    "metadata_file": "metadata.json",
+    "library_id_file": "library-id.json",
+    "docs_prefix": "docs-",
+    "config_file": "config.json"
+  }
+}

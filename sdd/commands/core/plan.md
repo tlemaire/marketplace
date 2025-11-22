@@ -24,6 +24,7 @@ Generate detailed technical implementation plan with architecture decisions base
    - Extract frameworks, languages, databases, tools
    - Identify deployment environment
    - Note any specific libraries or services
+   - **Auto-cache detected libraries** using `/mcp.cache add [library]` for offline access
 
 4. **Read project constitution** from SDD-enhanced memory:
    - **Primary**: `.specify/memory/constitution.md`
@@ -243,6 +244,7 @@ shell:         # Open shell in container
 - Verify non-functional requirements are covered
 - Check alignment with project constitution
 - Validate feasibility within constraints
+- **Cache Documentation**: Confirm detected libraries are cached for offline access
 
 ## Output:
 - Show created file paths

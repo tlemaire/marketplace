@@ -1,6 +1,14 @@
 # 🚀 Spec-Driven Development (SDD) Plugin
 
-> **Transform ideas into production-ready code through systematic workflow**
+> **Transform ideas into production-ready code through systematic workflow with built-in quality assurance and automatic documentation**
+
+## 🔒 **NEW: Enterprise-Grade Quality Features**
+
+- **✅ Code Validation**: Automatic code quality checks with auto-fix
+- **📚 Documentation Sync**: Real-time documentation updates
+- **🔗 Git Hooks**: Automated quality enforcement
+- **🧪 Shift-Left Testing**: Testing from specification to deployment
+- **🌐 MCP Integration**: Offline documentation and browser testing
 
 ## 🎯 **New to SDD? Start Here:**
 
@@ -29,36 +37,63 @@ claude plugin install sdd@marketplace
 /sdd.help
 ```
 
-### Your First Project (with TDD)
+### Your First Project (with Quality Assurance)
 ```bash
-# 1. Set project principles
+# 1. Setup quality environment (NEW)
+/sdd.setup-hooks --hooks pre-commit --validate-level normal
+
+# 2. Set project principles
 /sdd.constitution "Simple, no dependencies, fast loading"
 
-# 2. Create specification
+# 3. Create specification
 /sdd.specify "Create a simple landing page with contact form"
 
-# 3. Create test specifications (NEW - TDD Integration)
+# 4. Create test specifications (Shift-Left Testing)
 /sdd.tdd.specify "unit,integration,e2e"
 
-# 4. Design test architecture (NEW - TDD Integration)
+# 5. Design test architecture
 /sdd.tdd.design
 
-# 5. Plan implementation
+# 6. Plan implementation
 /sdd.plan "HTML5, CSS3, vanilla JavaScript"
 
-# 6. Generate tasks
+# 7. Generate tasks
 /sdd.tasks
 
 # 7. Create quality checklists (Enhanced with TDD)
 /sdd.checklist "requirements, ux, testing, performance"
 
-# 8. Implement with TDD (NEW - Test-First Development)
+# 8. Implement with automatic validation
 /sdd.tdd.implement all
+
+# 9. Automatic quality validation happens on each commit:
+git add .
+git commit -m "feat: implement landing page"
+# → Runs code validation, documentation sync, and tests automatically
+```
+
+## Quality-First Workflow (NEW)
+
+```bash
+# Setup enterprise-grade quality
+/sdd.setup-hooks --hooks pre-commit,pre-push --validate-level strict
+
+# Development with continuous validation
+/sdd.specify "User authentication system"
+/sdd.plan "React, TypeScript, Node.js"
+/sdd.implement
+
+# Automatic validation during development:
+# ✅ Code quality checks
+# ✅ Documentation synchronization
+# ✅ Test validation
+# ✅ Security scanning
+# ✅ Performance validation
 ```
 
 ## SDD-Compliant Structure
 
-This plugin itself follows the SDD methodology it promotes - "eating our own dog food":
+This plugin itself follows the SDD methodology it promotes:
 
 ```
 sdd/
@@ -66,14 +101,26 @@ sdd/
 ├── .specify/                           # 🧠 Enhanced Memory System
 │   └── memory/
 │       └── constitution.md             # Project principles (authoritative)
+├── .cache/                             # 🆕 Library cache system
+│   └── libraries/                      # Offline documentation cache
 ├── commands/                           # ⚡ Command implementations
 │   ├── core/                           # Core SDD commands
 │   ├── quality/                        # Quality assurance commands
-│   └── tdd/                            # 🆕 TDD commands (NEW)
-│       ├── specify.md                  # Test specification generator
-│       ├── design.md                   # Test architecture designer
-│       ├── implement.md                # TDD implementation workflow
-│       └── coverage.md                 # Coverage analysis and reporting
+│   │   ├── code-validate.md            # 🆕 Code validation & auto-fix
+│   │   ├── docs-sync.md                # 🆕 Documentation synchronization
+│   │   └── setup-hooks.md              # 🆕 Git hooks automation
+│   ├── tdd/                            # TDD commands
+│   │   ├── specify.md                  # Test specification generator
+│   │   ├── design.md                   # Test architecture designer
+│   │   ├── implement.md                # TDD implementation workflow
+│   │   └── coverage.md                 # Coverage analysis and reporting
+│   └── mcp/                            # 🆕 MCP integration commands
+│       ├── resolve-library.md          # Library resolution
+│       ├── get-docs.md                 # Documentation retrieval
+│       ├── browser-test.md             # Browser automation
+│       ├── ide-diagnostics.md          # IDE diagnostics
+│       ├── cache.md                    # Library caching
+│       └── help.md                     # MCP help
 ├── templates/                          # 📝 Project templates
 │   └── testing-checklist.md            # 🆕 Testing quality checklist
 └── specs/                              # 📋 Complete specifications
@@ -115,12 +162,29 @@ sdd/
 /sdd.analyze                 # Analyze consistency between artifacts
 ```
 
-### 🆕 TDD Commands (NEW)
+### 🆕 TDD Commands (Shift-Left Testing)
 ```bash
 /sdd.tdd.specify [focus]     # Create test specifications from requirements
 /sdd.tdd.design [framework]  # Design test architecture and strategy
 /sdd.tdd.implement [phase]   # Execute TDD implementation workflow
 /sdd.tdd.coverage [format]   # Analyze test coverage and generate reports
+```
+
+### 🔒 Quality Assurance Commands (NEW)
+```bash
+/sdd.code-validate [scope]   # Comprehensive code validation with auto-fix
+/sdd.docs-sync [type]        # Automatic documentation synchronization
+/sdd.setup-hooks [hooks]     # Git hooks automation for quality enforcement
+```
+
+### 🌐 MCP Integration Commands (NEW)
+```bash
+/mcp.resolve [library]       # Resolve library names for documentation
+/mcp.docs [library-id]       # Fetch up-to-date library documentation
+/mcp.browser [action]        # Automated browser testing
+/mcp.diags [severity]        # IDE language diagnostics
+/mcp.cache [action]          # Library caching for offline access
+/mcp.help                    # MCP commands help
 ```
 
 ### Help Command
@@ -135,25 +199,30 @@ sdd/
 - **Clarity**: Eliminate scope creep and ambiguous requirements
 - **🛡️ Reliability**: Test-first development prevents bugs and regressions
 - **Speed**: Automated task generation and environment setup
-- **Quality**: Built-in quality gates and comprehensive testing
-- **Confidence**: Automated tests provide continuous validation
+- **✅ Quality**: Built-in code validation with auto-fix capabilities
+- **📚 Documentation**: Automatic documentation synchronization
+- **Confidence**: Continuous validation through Git hooks
+- **🌐 Resources**: Offline documentation access and browser testing
 - **Consistency**: Standardized approach across all projects
 
 ### For Teams
 - **Collaboration**: Shared understanding through clear specifications
 - **🧪 Collective Quality**: Comprehensive test suite ensures team-wide code quality
-- **Traceability**: Track features from idea to implementation (with test coverage)
-- **Onboarding**: Easy for new members to understand project structure and tests
-- **🤝 Safe Refactoring**: Tests enable confident code changes by multiple developers
-- **Visibility**: Clear progress tracking and documentation with test metrics
+- **🔒 Consistent Standards**: Git hooks enforce quality across all team members
+- **📚 Shared Documentation**: Automatic docs sync keeps team knowledge current
+- **Traceability**: Track features from idea to implementation with full validation
+- **Onboarding**: Easy for new members to understand project structure and standards
+- **🤝 Safe Refactoring**: Automated validation enables confident code changes
+- **Visibility**: Clear progress tracking with quality metrics and documentation
 
 ### For Enterprise
-- **Governance**: Consistent methodology across projects
-- **🔒 Risk Mitigation**: Comprehensive testing prevents production issues
-- **Quality Assurance**: Built-in checklists and validation with test coverage
-- **Scalability**: Methodology scales from simple to complex projects
-- **📊 Compliance**: Automated testing and coverage reports for audit requirements
-- **Efficiency**: Reduced rework and miscommunication through test-driven development
+- **Governance**: Consistent methodology across projects with automated enforcement
+- **🔒 Risk Mitigation**: Comprehensive validation prevents production issues
+- **Quality Assurance**: Built-in code validation, testing, and documentation sync
+- **Compliance**: Automated quality gates and audit-ready documentation
+- **Scalability**: Methodology scales from simple to enterprise projects
+- **📊 Metrics**: Real-time quality scores and comprehensive reporting
+- **Efficiency**: Reduced rework through shift-left testing and validation
 
 ## Sample Projects
 
@@ -207,27 +276,44 @@ make docs                     # Generate documentation
 4. **Continuous Documentation**: Specifications evolve with the project
 5. **Team Collaboration**: Shared understanding through structured documents
 
-### Enhanced SDD + TDD Workflow
+### 🚀 Enhanced SDD + Quality Workflow
 
 1. **Constitution**: Establish project principles and quality standards
 2. **Specification**: Transform ideas into structured requirements
-3. **🆕 Test Specification**: Create comprehensive test requirements from specifications
+3. **🆕 Test Specification**: Create comprehensive test requirements (Shift-Left)
 4. **Planning**: Design technical implementation approach
 5. **🆕 Test Architecture**: Design test framework and strategy
 6. **Tasks**: Break down into manageable, dependency-organized tasks
-7. **🆕 TDD Implementation**: Write tests first, then implementation (Red-Green-Refactor)
-8. **🆕 Coverage Analysis**: Monitor and improve test coverage
-9. **Checklists**: Create quality assurance frameworks (Enhanced with testing)
-10. **Implementation**: Execute with clear guidance and validation
-11. **Analysis**: Verify consistency and quality across artifacts
+7. **🔒 Quality Setup**: Configure Git hooks and validation (NEW)
+8. **🆕 TDD Implementation**: Write tests first, then implementation
+9. **✅ Continuous Validation**: Automated code validation during development
+10. **📚 Documentation Sync**: Real-time documentation updates
+11. **🆕 Coverage Analysis**: Monitor and improve test coverage
+12. **Checklists**: Create quality assurance frameworks
+13. **Implementation**: Execute with continuous validation
+14. **Analysis**: Verify consistency and quality across artifacts
 
-### TDD Integration Benefits
+### Shift-Left Testing Benefits
 
-- **🛡️ Risk Reduction**: Tests prevent implementation defects and requirements drift
-- **⚡ Faster Development**: Catch issues early with rapid test feedback
+- **🛡️ Risk Reduction**: Tests defined BEFORE implementation prevents defects
+- **⚡ Early Detection**: Issues found 100x cheaper in specification phase
 - **🎯 Higher Quality**: Comprehensive test coverage ensures robust implementations
 - **📈 Maintainable Code**: Tests serve as living documentation and enable safe refactoring
-- **🔄 Continuous Confidence**: Automated tests validate system behavior continuously
+- **🔄 Continuous Confidence**: Automated validation at every development step
+
+### 🌐 MCP Integration Benefits
+
+- **📚 Offline Documentation**: Cached library documentation for reliable access
+- **🔍 Real-time Research**: Up-to-date API documentation during planning
+- **🎭 Browser Testing**: Automated E2E testing across devices
+- **💻 IDE Diagnostics**: Code quality feedback integrated in development
+
+### ✅ Quality Assurance Benefits
+
+- **🔒 Automated Enforcement**: Git hooks prevent code quality violations
+- **📝 Documentation Sync**: No more outdated documentation
+- **🛠️ Auto-Fix**: Common issues resolved automatically
+- **📊 Quality Metrics**: Real-time quality scoring and reporting
 
 ## Contributing
 
