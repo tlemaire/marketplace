@@ -74,6 +74,53 @@
 
 **Want examples?**: Check `/sdd/samples/` directory
 
+### 📚 **Sample Projects with Enterprise Quality**
+
+**Real-world examples** showing progressive complexity:
+
+```bash
+# Beginner Level (70% Quality Target)
+samples/01-beginner/hello-world/
+# → Basic quality validation, MCP documentation access
+/sdd.setup-hooks --hooks pre-commit --validate-level normal
+/mcp.cache add "HTML5 CSS3 JavaScript"
+
+# Intermediate Level (80% Quality Target)
+samples/02-intermediate/portfolio/
+# → Professional quality gates, SEO validation, advanced MCP
+/sdd.setup-hooks --hooks pre-commit,pre-push --validate-level normal
+/mcp.cache add "React TypeScript Jekyll SEO"
+mcp.browser test --url http://localhost:4000
+
+# Advanced Level (85% Quality Target)
+samples/03-advanced/kanban-board/
+# → Real-time collaboration, load testing, enterprise MCP
+/sdd.setup-hooks --hooks pre-commit,pre-push --validate-level strict
+mcp.cache add "Socket.IO PostgreSQL Redis"
+mcp.browser test --real-time --load-users 1000
+
+# Reference Level (95% Quality Target)
+samples/04-reference/authentication/
+# → Enterprise compliance, advanced security, professional MCP
+/sdd.setup-hooks --hooks pre-commit,pre-push --validate-level strict
+mcp.cache add "OAuth2 SAML SOC2 GDPR HIPAA"
+mcp.diags --file src/auth/ --security --compliance
+
+# Complete Level (95% Quality Target)
+samples/05-complete-example/
+# → Mission-critical, complete MCP ecosystem, real-time features
+/sdd.setup-hooks --hooks pre-commit,pre-push --validate-level strict
+mcp.cache update --scope all
+mcp.browser test --collaborative --real-time --load
+```
+
+**Each sample includes:**
+- ✅ Enterprise quality automation setup
+- 🔌 Complete MCP integration workflows
+- 📋 Quality validation and reporting
+- 🧪 Comprehensive testing strategies
+- 📚 Progressive documentation
+
 ---
 
 ## 🔒 Automatic Quality Validation (NEW)

@@ -228,10 +228,41 @@ sdd/
 
 Explore sample projects by complexity:
 
-- **Beginner**: `samples/01-beginner/hello-world/` - Simple landing page (1 hour)
-- **Intermediate**: `samples/02-intermediate/portfolio/` - Professional website (2-4 weeks)
-- **Advanced**: `samples/03-advanced/kanban/` - Collaborative system (6-8 weeks)
-- **Complete**: `samples/05-complete-example/` - Full application with all features (6-8 weeks)
+- **Beginner**: `samples/01-beginner/hello-world/` - Simple landing page with enterprise quality (70% target)
+- **Intermediate**: `samples/02-intermediate/portfolio/` - Professional website with advanced MCP integration (80% target)
+- **Advanced**: `samples/03-advanced/kanban-board/` - Real-time kanban system with load testing (85% target)
+- **Reference**: `samples/04-reference/authentication/` - Enterprise authentication with compliance features (95% target)
+- **Complete**: `samples/05-complete-example/` - Full collaborative application with complete MCP suite (95% target)
+
+### 🚀 **Enterprise Quality & MCP Features in Samples**
+
+All sample projects now include **progressive quality automation** and **MCP integration**:
+
+| Sample | Quality Target | MCP Features | Special Features |
+|--------|---------------|--------------|----------------|
+| **Beginner** | 70% Basic Quality | Auto-docs, Code Validation | Simple quality gates |
+| **Intermediate** | 80% Professional Quality | Full MCP Suite, SEO Validation | Professional workflows |
+| **Advanced** | 85% Enterprise Quality | Real-time MCP, Load Testing | Socket.IO, 1000+ users |
+| **Reference** | 95% Compliance Quality | Advanced MCP, Security | SOC2, GDPR, HIPAA |
+| **Complete** | 95% Mission-Critical | Complete MCP Ecosystem | Collaborative real-time |
+
+#### **🔌 Enterprise MCP Integration Examples**
+```bash
+# Sample MCP workflows from projects
+/mcp.resolve "React" && /mcp.cache add "TypeScript"  # Research and cache
+/mcp.browser test --real-time --load-users 1000          # Load testing
+/mcp.diags --file src/ --fix --security                 # Code quality
+```
+
+#### **✅ Quality Automation Examples**
+```bash
+# Setup enterprise quality gates
+/sdd.setup-hooks --hooks pre-commit,pre-push --validate-level strict
+
+# Automatic validation happens on each commit
+git add . && git commit -m "feature: implementation"
+# → Code validation, documentation sync, security scan, tests
+```
 
 ## Documentation
 
