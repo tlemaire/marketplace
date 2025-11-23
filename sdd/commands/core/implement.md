@@ -1,5 +1,5 @@
 ---
-description: Execute implementation tasks in dependency order
+description: Execute all tasks to build the feature according to the plan
 shortcut: sdd.implement
 ---
 

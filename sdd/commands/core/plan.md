@@ -1,5 +1,13 @@
 ---
-description: Generate detailed technical implementation plan with architecture decisions
+description: Create a technical implementation plans with your chosen tech stack
+handoffs:
+  - label: Generate Tasks
+    agent: sdd.tasks
+    prompt: Generate actionable task list for implementation
+  - label: Analyze Consistency
+    agent: sdd.analyze
+    prompt: Analyze consistency between specification and plan
+    send: true
 shortcut: sdd.plan
 ---
 

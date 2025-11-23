@@ -1,5 +1,13 @@
 ---
-description: Create dependency-organized task list for implementation
+description: Generate actionable task lists for implementation
+handoffs:
+  - label: Execute Implementation
+    agent: sdd.implement
+    prompt: Execute all tasks to build the feature according to the plan
+  - label: Quality Checklist
+    agent: sdd.checklist
+    prompt: Generate custom quality checklists for the implementation
+    send: true
 shortcut: sdd.tasks
 ---
 

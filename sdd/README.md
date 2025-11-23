@@ -1,6 +1,8 @@
 # 🚀 Spec-Driven Development (SDD) Plugin
 
 > **Transform ideas into production-ready code through systematic workflow with built-in quality assurance and automatic documentation**
+>
+> **Enhanced GitHub Spec Kit Integration** - 100% compliant with GitHub Spec Kit methodology while providing enterprise-grade enhancements
 
 ## 🔒 **NEW: Enterprise-Grade Quality Features**
 
@@ -24,6 +26,29 @@
 - **[Templates & Patterns](templates/)** - Ready-to-use templates
 
 ## Quick Start
+
+## 🔄 GitHub Spec Kit Compatibility
+
+SDD maintains **100% compliance** with GitHub Spec Kit methodology while providing these enhanced capabilities:
+
+### Spec Kit Core Commands (100% Compatible)
+```bash
+/sdd.specify "Create user authentication system"           # Same as /speckit.specify
+/sdd.plan "React, Node.js, PostgreSQL"                     # Same as /speckit.plan
+/sdd.tasks                                                 # Same as /speckit.tasks
+/sdd.implement                                             # Same as /speckit.implement
+```
+
+### SDD Enterprise Enhancements (Beyond Spec Kit)
+```bash
+/sdd.constitution "Quality-first development"              # Enhanced: Explicit project principles
+/sdd.clarify                                               # Enhanced: Interactive requirements clarification
+/sdd.checklist "quality, security"                         # Enhanced: Comprehensive quality gates
+/sdd.analyze                                               # Enhanced: Automated consistency validation
+/sdd.code-validate                                        # NEW: Code validation with auto-fix
+/sdd.docs-sync                                            # NEW: Real-time documentation updates
+/sdd.setup-hooks                                          # NEW: Git automation for quality enforcement
+```
 
 ### Installation
 ```bash
@@ -60,16 +85,31 @@ claude plugin install sdd@marketplace
 # 7. Generate tasks
 /sdd.tasks
 
-# 7. Create quality checklists (Enhanced with TDD)
+# 8. Create quality checklists (Enhanced with TDD)
 /sdd.checklist "requirements, ux, testing, performance"
 
-# 8. Implement with automatic validation
+# 9. Implement with automatic validation
 /sdd.tdd.implement all
 
-# 9. Automatic quality validation happens on each commit:
+# 10. Automatic quality validation happens on each commit:
 git add .
 git commit -m "feat: implement landing page"
 # → Runs code validation, documentation sync, and tests automatically
+```
+
+### 🔄 Keeping SDD Updated
+```bash
+# Check if update is available (quick version check)
+/sdd.update-github-spec-kit --check-only
+
+# Manual update - safe, user-controlled process
+/sdd.update-github-spec-kit
+
+# Automated update - intelligent conflict resolution
+/sdd.auto-update-spec-kit --mode smart
+
+# Preview what would be updated
+/sdd.auto-update-spec-kit --dry-run --verbose
 ```
 
 ## Quality-First Workflow (NEW)
@@ -187,6 +227,12 @@ sdd/
 /mcp.help                    # MCP commands help
 ```
 
+### 🔄 Update Commands (NEW)
+```bash
+/sdd.update-github-spec-kit              # Manual update with preservation of enhancements
+/sdd.auto-update-spec-kit               # Automated intelligent update with conflict resolution
+```
+
 ### Help Command
 ```bash
 /sdd.help                    # Show comprehensive help and guidance
@@ -204,6 +250,7 @@ sdd/
 - **Confidence**: Continuous validation through Git hooks
 - **🌐 Resources**: Offline documentation access and browser testing
 - **Consistency**: Standardized approach across all projects
+- **🔄 Continuous Updates**: Automated GitHub Spec Kit integration while preserving enhancements
 
 ### For Teams
 - **Collaboration**: Shared understanding through clear specifications
