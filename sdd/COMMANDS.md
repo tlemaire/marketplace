@@ -37,6 +37,17 @@
 
 ---
 
+## 🔄 **Update Commands** (Keep SDD current with latest GitHub Spec Kit)
+
+| Command | What It Does | Use Case |
+|---------|--------------|----------|
+| `/sdd.update-github-spec-kit --check-only` | Check if update available | Quick version check |
+| `/sdd.update-github-spec-kit` | Manual update with full control | Safe user-controlled updates |
+| `/sdd.auto-update-spec-kit --mode smart` | Automated intelligent update | Hands-free updates |
+| `/sdd.auto-update-spec-kit --dry-run` | Preview what would update | Test before applying |
+
+---
+
 ## 🔌 **MCP Commands** (Enhanced capabilities with local MCP servers)
 
 | Command | What It Does | Use Case |

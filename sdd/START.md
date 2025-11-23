@@ -13,6 +13,9 @@
 ### 🌐 **I want to work offline with cached documentation**
 [→ Offline Development](#offline-development)
 
+### 🔄 **I want to keep SDD updated with latest GitHub Spec Kit**
+[→ Stay Updated](#stay-updated)
+
 ---
 
 ## 🤔 **What Kind of Project Are You Building?**
@@ -241,8 +244,45 @@ git commit -m "feat: implement feature"
 
 ---
 
+## 🔄 **Stay Updated**
+
+**Perfect for**: Users who want to keep SDD current with latest GitHub Spec Kit enhancements
+
+**Setup**:
+```bash
+# 1. Quick version check
+/sdd.update-github-spec-kit --check-only
+
+# 2. Automated update (recommended)
+/sdd.auto-update-spec-kit --mode smart
+
+# 3. Preview before applying
+/sdd.auto-update-spec-kit --dry-run --verbose
+
+# 4. Manual update with full control
+/sdd.update-github-spec-kit
+```
+
+**Benefits**:
+- 🔄 Automatic version checking (only updates if newer version available)
+- 🛡️ Preserves all SDD enterprise enhancements
+- 🔍 Smart conflict resolution
+- 📝 Comprehensive update reports
+- ⚡ Fast version comparison with GitHub API
+
+**Update Frequency**:
+- **Monthly**: Regular maintenance check
+- **New Spec-kit Release**: Automatic detection and update
+- **Manual**: Whenever you want latest features
+
+**For detailed guide**: See [UPDATE_GUIDE.md](UPDATE_GUIDE.md)
+
+---
+
 ## 🚀 **Ready?**
 
 **Choose your path above or start with**: `/sdd.setup-hooks --hooks pre-commit` then `/sdd.specify "your project idea"`
+
+**Keep updated**: `/sdd.update-github-spec-kit --check-only`
 
 *Remember: SDD with automatic quality means you can focus on building features while the system handles quality assurance!* ✨

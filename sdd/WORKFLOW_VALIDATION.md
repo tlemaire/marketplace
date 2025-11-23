@@ -7,6 +7,9 @@ This document demonstrates the complete quality assurance workflow integrated in
 ## 🚀 Quick Setup (One-time)
 
 ```bash
+# Check SDD is current with GitHub Spec Kit
+/sdd.update-github-spec-kit --check-only
+
 # Setup automated validation hooks
 /sdd.setup-hooks --hooks pre-commit,pre-push --validate-level normal --docs-update
 

@@ -66,6 +66,28 @@
 
 ---
 
+## 🔄 **Keeping SDD Updated**
+
+SDD automatically integrates with GitHub Spec Kit. Keep it current:
+
+```bash
+# Quick check for updates
+/sdd.update-github-spec-kit --check-only
+
+# Manual update (safe)
+/sdd.update-github-spec-kit
+
+# Automated update (recommended)
+/sdd.auto-update-spec-kit --mode smart
+
+# Preview changes before applying
+/sdd.auto-update-spec-kit --dry-run
+```
+
+**Note**: Updates only proceed if a newer version is available, preserving all your customizations.
+
+---
+
 ## 🆘 Need Help?
 
 **Stuck? Just ask**: `/sdd.help`
@@ -73,6 +95,8 @@
 **Confused about commands?**: `/sdd.help "command name"`
 
 **Want examples?**: Check `/sdd/samples/` directory
+
+**Update issues?**: See `UPDATE_GUIDE.md` for troubleshooting
 
 ### 📚 **Sample Projects with Enterprise Quality**
 

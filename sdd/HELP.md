@@ -14,6 +14,7 @@
 - Testing Commands: `/sdd.help "tdd"`
 - Quality Commands: `/sdd.help "quality"`
 - MCP Commands: `/mcp.help` (Documentation, Browser Testing, Diagnostics, Cache)
+- Update Commands: `/sdd.update-github-spec-kit --check-only` (Version check and updates)
 - Validation: `/sdd.code-validate` (Code quality & documentation)
 - Git Hooks: `/sdd.setup-hooks` (Automated validation)
 
@@ -46,6 +47,12 @@
 
 ### **"I need enterprise-grade quality and documentation"**
 → Use: `/sdd.setup-hooks --hooks pre-commit,pre-push --validate-level strict` → `/sdd.constitution "security, performance, documentation"` → `/sdd.specify "requirements"` → `/sdd.implement` → `/sdd.code-validate --scope all --strict` → `/sdd.docs-sync --all --auto`
+
+### **"I want to keep SDD updated with latest GitHub Spec Kit"**
+- Use: `/sdd.update-github-spec-kit --check-only` (quick check) → `/sdd.auto-update-spec-kit --mode smart` (automated update)
+
+### **"I need to verify SDD is working correctly"**
+- Use: `/sdd.update-github-spec-kit --check-only` → `/sdd.validate` → `/sdd.code-validate --status`
 
 ---
 
